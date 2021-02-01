@@ -6,6 +6,15 @@ body {
   font-family: 'karlaregular';
 }
 
+h1, h2, h3 {
+  font-family: 'ms_gloriola_ii_std_semibold';
+}
+
+.content {
+  max-width:1440px;
+  margin:auto;
+}
+
 .hdr-video {
   max-height:600px;
   overflow:hidden;
@@ -38,6 +47,15 @@ body {
   > div {
     margin:0 auto 1.5rem auto;
     width:95%;
+  }
+  h2 {
+    color:#fff;
+    font-size: 2.5rem;
+    position:absolute;
+    top:1rem;
+    left:1rem;
+    max-width: 80%;
+    line-height: 1;
   }
   // Assign grid for IE
   :nth-child(1) {
