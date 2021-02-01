@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'karlaregular';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/karla-regular-webfont.eot") format("embedded-opentype"), url("../fonts/karla-regular-webfont.woff") format("woff"), url("../fonts/karla-regular-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'karlabold';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/karla-bold-webfont.eot") format("embedded-opentype"), url("../fonts/karla-bold-webfont.woff") format("woff"), url("../fonts/karla-bold-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: karlaitalic;
+  src: url("../fonts/karla-italic-webfont.eot") format("embedded-opentype"), url("../fonts/karla-italic-webfont.woff") format("woff"), url("../fonts/karla-italic-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: karlabolditalic;
+  src: url("../fonts/karla-bolditalic-webfont.eot") format("embedded-opentype"), url("../fonts/karla-bolditalic-webfont.woff") format("woff"), url("../fonts/karla-bolditalic-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ms_gloriola_ii_stdregular";
+  src: url("../fonts/ms_gloriola_ii_std_reg-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_std_reg-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_std_reg-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ms_gloriola_ii_displaythin';
+  src: url("../fonts/ms_gloriola_ii_display_thin-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_display_thin-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_display_thin-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ms_gloriola_ii_std_semibold';
+  src: url("../fonts/ms_gloriola_ii_std_semibd-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_std_semibd-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_std_semibd-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ms_gloriola_ii_std_medium';
+  src: url("../fonts/ms_gloriola_ii_std_medium-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_std_medium-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_std_medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*# sourceMappingURL=fonts.css.map */
