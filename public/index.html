@@ -10,13 +10,15 @@
   <link href="css/main.css" rel="stylesheet">
   <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/4b382b0d13.js" crossorigin="anonymous"></script>
   <title>India Campus</title>
 </head>
 
 <body>
 <div class="content">
-  <header class="py-10">
-    MS header with nav
+  <header class="py-10 px-10 flex justify-between text-3xl">
+    <img src="img/logo-black.png" alt="Morgan Stanley">
+    <i class="fas fa-bars cursor-pointer"></i>
   </header>
   <section class="hdr-video">
     <video width="100%" height="auto">
@@ -24,57 +26,66 @@
     </video>
   </section>
   <section class="main-layout">
-    <div>
+    <div class="flex flex-col" data-aos="fade-up">
       <div class="relative">
-        <h2>Reception</h2>
+        <h2 data-aos="fade" data-aos-duration="2000">Reception</h2>
         <img class="w-full" src="http://placekitten.com/300/200">
       </div>
-      <div class="tmp"></div>
-    </div>
-    <div>
-      <div class="relative">
-        <h2>Office Buildings</h2>
-        <img class="w-full" src="http://placekitten.com/300/200">
-      </div>
-      <div class="flex">
-        <div class="tmp w-1/3 mr-5" style="background-color: aqua;"></div>
-        <div class="tmp w-2/3"></div>
+      <div class="flex flex-1 mt-5">
+        <div class="w-1/4 mr-5 box box--blue"></div>
+        <div class="w-3/4 box box--light-blue"></div>
       </div>
     </div>
-    <div>
+    <div class="flex flex-col" data-aos="fade-up">
       <div class="relative">
-        <h2>Wellness & Recreation</h2>
-        <img class="w-full" src="http://placekitten.com/300/200">
+        <h2 data-aos="fade" data-aos-duration="2000">Office Buildings</h2>
+        <img class="w-full" src="http://placekitten.com/300/300">
       </div>
-      <div class="tmp"></div>
+      <div class="flex flex-1 mt-5 box box--jade"></div>
+    </div>
+    <div class="flex flex-col" data-aos="fade-up">
+      <div class="relative">
+        <h2 data-aos="fade" data-aos-duration="2000">Wellness & Recreation</h2>
+        <img class="w-full" src="http://placekitten.com/300/240">
+      </div>
+      <div class="flex flex-1 mt-5">
+        <div class="box box--violet w-10/12 mr-5"></div>
+        <div class="box w-2/12"></div>
+      </div>
     </div>
     <!-- row 2 -->
-    <div>
+    <div class="flex flex-col" data-aos="fade-up">
       <div class="relative">
-        <h2>Conference Rooms & Workplace</h2>
-        <img class="w-full" src="http://placekitten.com/300/200">
+        <h2 data-aos="fade" data-aos-duration="2000">Conference Rooms & Workplace</h2>
+        <img class="w-full" src="http://placekitten.com/300/400">
       </div>
-      <div class="tmp"></div>
+      <div class="box flex-1 mt-5"></div>
     </div>
-    <div>
+    <div class="flex flex-col" data-aos="fade-up">
       <div class="relative">
-        <h2>Agile Space</h2>
-        <img class="w-full" src="http://placekitten.com/300/200">
+        <h2 data-aos="fade" data-aos-duration="2000">Agile Space</h2>
+        <img class="w-full" src="http://placekitten.com/300/250">
       </div>
-      <div class="flex">
-        <div class="tmp w-2/3 mr-5"></div>
-        <div class="tmp w-1/3" style="background-color: pink"></div>
-      </div>
+      <div class="flex-1 mt-5 box box--green"></div>
     </div>
-    <div>
+    <div class="flex flex-col" data-aos="fade-up">
       <div class="relative">
-        <h2>Pantry & Cafeteria</h2>
-        <img class="w-full" src="http://placekitten.com/300/200">
+        <h2 data-aos="fade" data-aos-duration="2000">Pantry & Cafeteria</h2>
+        <img class="w-full" src="http://placekitten.com/300/300">
       </div>
-      <div class="tmp"></div>
+      <div class="flex flex-1 mt-5">
+        <div class="box box--violet mr-5 w-2/12"></div>
+        <div class="box box--light-blue w-10/12"></div>
+
+      </div>
     </div>
   </section>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha512-tnNM6PPNOVfZ5sGPw6hThCrcUBeqt2mVEk3EAj8tCtuMHqbuVm5/HsZagrr8W2aaFE+6rKIByGwQbEnmodrYVg==" crossorigin="anonymous"></script>
+<script>
+AOS.init({duration:800});
+</script>
 </body>
 
 </html>

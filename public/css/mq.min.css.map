@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../scss/mq.scss"
+    ],
+    "names": [],
+    "file": "mq.min.css"
+}

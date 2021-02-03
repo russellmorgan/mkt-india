@@ -7,9 +7,52 @@ h1, h2, h3 {
   font-family: 'ms_gloriola_ii_std_semibold';
 }
 
+h3 {
+  font-size: 1.875rem;
+}
+
+p {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+header {
+  border-bottom: 1px solid #979797;
+}
+
+header img {
+  max-height: 33px;
+}
+
 .content {
+  width: 100%;
   max-width: 1440px;
   margin: auto;
+}
+
+.box {
+  background: #99AAB9;
+  min-height: 140px;
+}
+
+.box--blue {
+  background: #A3CAE3;
+}
+
+.box--light-blue {
+  background: #009AD9;
+}
+
+.box--jade {
+  background: #9DC5C9;
+}
+
+.box--violet {
+  background: rgba(104, 117, 183, 0.5);
+}
+
+.box--green {
+  background: rgba(0, 93, 144, 0.5);
 }
 
 .hdr-video {
@@ -58,7 +101,7 @@ h1, h2, h3 {
   width: 95%;
 }
 
-.main-layout h2 {
+.main-layout .relative > h2 {
   color: #fff;
   font-size: 2.5rem;
   position: absolute;
@@ -98,10 +141,9 @@ h1, h2, h3 {
   -ms-grid-row: 2;
 }
 
-.tmp {
-  background: #ccc;
-  height: 200px;
-  margin-top: 1.5rem;
+.btn-slideshow {
+  color: #187ABA;
+  font-family: 'karlabold';
 }
 
 .site {
