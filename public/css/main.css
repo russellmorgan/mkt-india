@@ -86,18 +86,28 @@ header nav a img {
 }
 
 .hdr-video {
-  max-height: 600px;
   overflow: hidden;
   width: 100%;
-  background: #000;
+  background: #ccc;
   margin-bottom: 1.5rem;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
 }
 
 .hdr-video video {
   width: 100%;
-  max-height: 600px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hdr-video h1 {
+  color: #fff;
+  font-size: 3.375rem;
+  line-height: 1;
 }
 
 .main-layout {
