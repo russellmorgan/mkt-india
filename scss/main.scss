@@ -4,6 +4,7 @@
 body {
   background-color: #fff;
   font-family: 'karlaregular';
+  margin:0 1.25rem;
 }
 
 h1, h2, h3 {
@@ -43,9 +44,14 @@ header nav {
     display:flex;
     align-items: center;
     font-family: 'karlabold';
-    margin-right:2rem;
+    margin-right:1rem;
+    padding-right:1rem;
     width:calc(50% - 2rem);
     margin-bottom:1.25rem;
+    &:hover {
+      background:#eee;
+      text-decoration: underline;
+    }
     img {
       margin-right:1rem;
       max-height:100px;

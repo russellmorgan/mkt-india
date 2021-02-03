@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
   font-family: 'karlaregular';
+  margin: 0 1.25rem;
 }
 
 h1, h2, h3 {
@@ -49,9 +50,15 @@ header nav a {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'karlabold';
-  margin-right: 2rem;
+  margin-right: 1rem;
+  padding-right: 1rem;
   width: calc(50% - 2rem);
   margin-bottom: 1.25rem;
+}
+
+header nav a:hover {
+  background: #eee;
+  text-decoration: underline;
 }
 
 header nav a img {
