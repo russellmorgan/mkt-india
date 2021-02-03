@@ -29,6 +29,11 @@ border-bottom:1px solid #979797;
   }
 }
 
+footer > div {
+  border-top:2px solid #979797;
+  border-bottom:2px solid #979797;
+}
+
 header nav {
   background:#fff;
   padding:3rem;
@@ -102,6 +107,7 @@ header nav {
   width:100%;
   @include mq($from: tablet) {
     display:grid;
+    gap:1.25rem;
     -ms-grid-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -114,8 +120,8 @@ header nav {
     grid-template-rows: 1fr 1fr;
   }
   > div {
-    margin:0 auto 1.5rem auto;
-    width:95%;
+    // margin:0 auto 1.5rem auto;
+    // width:95%;
   }
   .relative > h2 {
     color:#fff;

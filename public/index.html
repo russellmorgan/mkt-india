@@ -19,8 +19,8 @@
     <div class="content flex justify-between px-10 relative z-10">
       <img src="img/logo-black.png" alt="Morgan Stanley">
       <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
-      <nav class="absolute top-0 right-0 z-20 flex" x-show.transition="open">
-        <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer"></i>
+      <nav class="absolute top-0 right-0 z-20 flex shadow" x-show.transition="open">
+        <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
         <a href="detail.html"><img src="http://placekitten.com/90/90">Reception</a>
         <a href="detail.html"><img src="http://placekitten.com/90/90">Office Buildings</a>
         <a href="detail.html"><img src="http://placekitten.com/90/90">Wellness & Recreation</a>
@@ -37,8 +37,7 @@
         <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et est sodales, convallis ante a, vestibulum lectus. Proin pharetra, tellus nec efficitur suscipit.</p>
         <div class="text-center flex flex-col text-sm"><em>Take the Tour</em><i class="fas fa-chevron-down animate-bounce"></i></div>
       </div>
-
-      <video muted autoplay loop width="100%" height="auto">
+      <video muted autoplay width="100%" height="auto">
         <source src="video/marketing-india.mp4" type="video/mp4">
       </video>
     </section>
@@ -63,7 +62,7 @@
       <div class="flex flex-col" data-aos="fade-up">
         <div class="relative">
           <h2 data-aos="fade" data-aos-duration="2000">Wellness & Recreation</h2>
-          <img class="w-full" src="img/wellness.jpg">
+          <img class="w-full" src="img/rcreation.jpg">
         </div>
         <div class="flex flex-1 mt-5">
           <div class="box box--violet w-10/12 mr-5"></div>
@@ -93,10 +92,15 @@
         <div class="flex flex-1 mt-5">
           <div class="box box--violet mr-5 w-2/12"></div>
           <div class="box box--light-blue w-10/12"></div>
-
         </div>
       </div>
     </section>
+    <footer class="my-20">
+      <div class="flex w-1/2 px-20 py-5 mx-auto justify-between">
+        <a href="">India CIG Jive Website</a>
+        <a href="">85th Anniversary</a>
+      </div>
+    </footer>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"
