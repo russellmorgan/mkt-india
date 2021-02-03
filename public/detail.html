@@ -15,10 +15,19 @@
 </head>
 
 <body>
-  <header class="py-10">
-    <div class="content flex justify-between text-3xl px-10">
-    <img src="img/logo-black.png" alt="Morgan Stanley">
-    <i class="fas fa-bars cursor-pointer"></i>
+  <header class="py-10" x-data="{open:false}">
+    <div class="content flex justify-between px-10 relative z-10">
+      <img src="img/logo-black.png" alt="Morgan Stanley">
+      <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
+      <nav class="absolute top-0 right-0 z-20 flex shadow" x-show.transition="open">
+        <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 p-3 cursor-pointer"></i>
+        <a href="detail.html"><img src="http://placekitten.com/90/90">Reception</a>
+        <a href="detail.html"><img src="http://placekitten.com/90/90">Office Buildings</a>
+        <a href="detail.html"><img src="http://placekitten.com/90/90">Wellness & Recreation</a>
+        <a href="detail.html"><img src="http://placekitten.com/90/90">Conference Rooms & Workplace</a>
+        <a href="detail.html"><img src="http://placekitten.com/90/90">Agile Spaces</a>
+        <a href="detail.html"><img src="http://placekitten.com/90/90">Pantry & Cafeteria</a>
+      </nav>
     </div>
   </header>
   <div class="content px-10">
@@ -38,12 +47,12 @@
         View as slideshow
       </div>
       <div class="flex flex-wrap">
-        <div class="m-2"> <img class="w-full" src="http://placekitten.com/420/230"></div>
-        <div class="m-2"> <img class="w-full" src="http://placekitten.com/420/230"></div>
-        <div class="m-2"> <img class="w-full" src="http://placekitten.com/420/230"></div>
-        <div class="m-2"> <img class="w-full" src="http://placekitten.com/420/230"></div>
-        <div class="m-2"> <img class="w-full" src="http://placekitten.com/420/230"></div>
-        <div class="m-2"> <img class="w-full" src="http://placekitten.com/420/230"></div>
+        <div class="m-2"><img class="w-full" src="http://placekitten.com/420/230"></div>
+        <div class="m-2"><img class="w-full" src="http://placekitten.com/420/230"></div>
+        <div class="m-2"><img class="w-full" src="http://placekitten.com/420/230"></div>
+        <div class="m-2"><img class="w-full" src="http://placekitten.com/420/230"></div>
+        <div class="m-2"><img class="w-full" src="http://placekitten.com/420/230"></div>
+        <div class="m-2"><img class="w-full" src="http://placekitten.com/420/230"></div>
       </div>
     </section>
   </div>
