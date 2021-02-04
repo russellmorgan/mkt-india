@@ -21,12 +21,12 @@
       <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
       <nav class="absolute top-0 right-0 z-20 flex shadow" x-show.transition="open">
         <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
-        <a href="detail.html"><img src="http://placekitten.com/90/90">Reception</a>
-        <a href="detail.html"><img src="http://placekitten.com/90/90">Office Buildings</a>
-        <a href="detail.html"><img src="http://placekitten.com/90/90">Wellness & Recreation</a>
-        <a href="detail.html"><img src="http://placekitten.com/90/90">Conference Rooms & Workplace</a>
-        <a href="detail.html"><img src="http://placekitten.com/90/90">Agile Spaces</a>
-        <a href="detail.html"><img src="http://placekitten.com/90/90">Pantry & Cafeteria</a>
+        <a href="detail.html"><img src="img/reception2.jpg">Reception</a>
+        <a href="detail.html"><img src="img/building.jpg">Office Buildings</a>
+        <a href="detail.html"><img src="img/rcreation.jpg">Wellness & Recreation</a>
+        <a href="detail.html"><img src="img/conference.jpg">Conference Rooms & Workplace</a>
+        <a href="detail.html"><img src="img/agile2.jpg">Agile Spaces</a>
+        <a href="detail.html"><img src="img/pantry.jpg">Pantry & Cafeteria</a>
       </nav>
     </div>
   </header>
@@ -43,63 +43,66 @@
     </section>
     <section class="main-layout">
       <div class="flex flex-col" data-aos="fade-up">
-        <div class="relative">
+        <div class="relative fade">
           <h2 data-aos="fade" data-aos-duration="2000">Reception</h2>
-          <img class="w-full" src="img/reception2.jpg">
+          <img class="w-full" src="img/reception2.jpg" alt="wood ceiling">
         </div>
-        <div class="flex flex-1 mt-5">
-          <div class="w-1/4 mr-5 box box--blue"></div>
-          <div class="w-3/4 box box--light-blue"></div>
+        <div class="flex mt-5">
+          <div class="w-3/12 mr-5 box box--blue"></div>
+          <div class="w-9/12">
+            <img src="img/reception.jpg" alt="man with pen">
+          </div>
         </div>
       </div>
       <div class="flex flex-col" data-aos="fade-up">
-        <div class="relative">
+        <div class="relative fade">
           <h2 data-aos="fade" data-aos-duration="2000">Office Buildings</h2>
           <img class="w-full" src="img/building.jpg">
         </div>
         <div class="flex flex-1 mt-5 box box--jade"></div>
       </div>
       <div class="flex flex-col" data-aos="fade-up">
-        <div class="relative">
+        <div class="relative fade">
           <h2 data-aos="fade" data-aos-duration="2000">Wellness & Recreation</h2>
           <img class="w-full" src="img/rcreation.jpg">
         </div>
         <div class="flex flex-1 mt-5">
-          <div class="box box--violet w-10/12 mr-5"></div>
+          <img class="mr-5 w-10/12" src="img/wellness.jpg" alt="woman stretching">
           <div class="box w-2/12"></div>
         </div>
       </div>
       <!-- row 2 -->
       <div class="flex flex-col" data-aos="fade-up">
-        <div class="relative">
+        <div class="relative fade">
           <h2 data-aos="fade" data-aos-duration="2000">Conference Rooms & Workplace</h2>
           <img class="w-full" src="img/conference.jpg">
         </div>
-        <div class="box flex-1 mt-5"></div>
+        <div class="box mt-5"></div>
       </div>
       <div class="flex flex-col" data-aos="fade-up">
-        <div class="relative">
+        <div class="relative fade">
           <h2 data-aos="fade" data-aos-duration="2000">Agile Space</h2>
-          <img class="w-full" src="img/agile.jpg">
+          <img class="w-full" src="img/agile2.jpg" alt="close up of chair">
         </div>
-        <div class="flex-1 mt-5 box box--green"></div>
+        <img class="mt-5" src="img/agile.jpg" alt="close up of desk">
       </div>
       <div class="flex flex-col" data-aos="fade-up">
-        <div class="relative">
+        <div class="relative fade">
           <h2 data-aos="fade" data-aos-duration="2000">Pantry & Cafeteria</h2>
-          <img class="w-full" src="img/pantry.jpg">
+          <img class="w-full" src="img/pantry.jpg" alt="two chairs and table">
         </div>
-        <div class="flex flex-1 mt-5">
+        <div class="flex mt-5">
           <div class="box box--violet mr-5 w-2/12"></div>
-          <div class="box box--light-blue w-10/12"></div>
+          <img class="w-10/12" src="img/cafe.jpg" alt="cup of coffee">
         </div>
       </div>
     </section>
     <footer class="my-20">
       <div class="flex w-1/2 px-20 py-5 mx-auto justify-between">
         <a href="">India CIG Jive Website</a>
-        <a href="">85th Anniversary</a>
+        <a href="https://ourhistory.morganstanley.com/" target="_blank">85th Anniversary</a>
       </div>
+      <p class="text-center text-sm pt-10">&copy; 2021 Morgan Stanley All rights reserved</p>
     </footer>
   </div>
 
