@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   font-family: 'karlaregular';
@@ -157,6 +161,9 @@ header nav a img {
 
 .main-layout .fade {
   z-index: 10;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .main-layout .fade:before {
@@ -167,6 +174,20 @@ header nav a img {
   background: black;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(59%, rgba(0, 17, 18, 0)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 17, 18, 0) 59%);
+}
+
+.main-layout .fade:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.main-layout .fade:hover:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(59%, rgba(0, 17, 18, 0)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 17, 18, 0) 59%);
+}
+
+.main-layout .fade:hover h2 {
+  text-decoration: underline;
 }
 
 .main-layout .fade > h2 {

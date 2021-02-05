@@ -1,6 +1,10 @@
 // Responsive helper
 @import 'mq';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   font-family: 'karlaregular';
@@ -132,6 +136,8 @@ header nav {
   }
   .fade {
     z-index:10;
+    transition:all 0.2s ease;
+    cursor:pointer;
     &:before {
       content: '';
       position: absolute;
@@ -139,6 +145,15 @@ header nav {
       height:100%;
       background: rgb(0,0,0);
       background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,17,18,0) 59%); 
+    }
+    &:hover {
+      transform:scale(1.02);
+      &:before {
+        background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,17,18,0) 59%); 
+      }
+      h2 {
+        text-decoration: underline;
+      }
     }
   }
   .fade > h2 {
