@@ -157,6 +157,7 @@ header nav a img {
 @media (min-width: 80em) {
   .main-layout {
     -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
@@ -205,32 +206,32 @@ header nav a img {
   z-index: 20;
 }
 
-.main-layout :nth-child(1) {
+.main-layout #reception {
   -ms-grid-column: 1;
   -ms-grid-row: 1;
 }
 
-.main-layout :nth-child(2) {
+.main-layout #office {
   -ms-grid-column: 2;
   -ms-grid-row: 1;
 }
 
-.main-layout :nth-child(3) {
+.main-layout #wellness {
   -ms-grid-column: 3;
   -ms-grid-row: 1;
 }
 
-.main-layout :nth-child(4) {
+.main-layout #workplace {
   -ms-grid-column: 1;
   -ms-grid-row: 2;
 }
 
-.main-layout :nth-child(5) {
+.main-layout #agile {
   -ms-grid-column: 2;
   -ms-grid-row: 2;
 }
 
-.main-layout :nth-child(6) {
+.main-layout #pantry {
   -ms-grid-column: 3;
   -ms-grid-row: 2;
 }

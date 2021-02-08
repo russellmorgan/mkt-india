@@ -131,7 +131,7 @@ header nav {
   }
   @include mq($from: wide) {
     -ms-grid-columns: 1fr 1fr 1fr;
-    // -ms-grid-rows: 1fr 1fr;
+    -ms-grid-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -166,30 +166,29 @@ header nav {
     max-width: 80%;
     line-height: 1;
     z-index:20;
-    // text-shadow:1px 1px 0px #000;
   }
   // Assign grid for IE
-  :nth-child(1) {
+  #reception {
     -ms-grid-column: 1;
     -ms-grid-row:1
   }
-  :nth-child(2) {
+  #office {
     -ms-grid-column: 2;
     -ms-grid-row:1
   }
-  :nth-child(3) {
+  #wellness {
     -ms-grid-column: 3;
     -ms-grid-row:1
   }
-  :nth-child(4) {
+  #workplace {
     -ms-grid-column: 1;
-    -ms-grid-row:2
+    -ms-grid-row:2;
   }
-  :nth-child(5) {
+  #agile {
     -ms-grid-column: 2;
     -ms-grid-row:2
   }
-  :nth-child(6) {
+  #pantry {
     -ms-grid-column: 3;
     -ms-grid-row:2
   }
