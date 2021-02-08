@@ -5,7 +5,12 @@ html {
 body {
   background-color: #fff;
   font-family: 'karlaregular';
-  margin: 0 1.25rem;
+}
+
+@media (min-width: 46.25em) {
+  body {
+    margin: 0 1.25rem;
+  }
 }
 
 h1, h2, h3 {
@@ -34,12 +39,12 @@ header #menu-close {
 }
 
 footer > div {
-  border-color: #979797;
+  border-color: #DDD;
 }
 
 footer > div .fa-circle {
   font-size: 0.2rem;
-  color: #979797;
+  color: #DDD;
 }
 
 header nav {
@@ -111,7 +116,6 @@ header nav a img {
   overflow: hidden;
   width: 100%;
   background: #ccc;
-  margin-bottom: 1.5rem;
   position: relative;
   height: 0;
   overflow: hidden;
