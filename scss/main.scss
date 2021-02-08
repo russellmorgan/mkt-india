@@ -199,6 +199,18 @@ header nav {
   font-family: 'karlabold';
 }
 
+.thumbnails {
+  > div {
+    cursor: pointer;
+    margin-bottom:2%;
+    @include mq($from: tablet) {
+      width:30%;
+      margin-right:2%;
+    }
+    
+  }
+}
+
 // Fonts
 @font-face {
   font-family: 'karlaregular';
