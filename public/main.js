@@ -1,3 +1,6 @@
+// Make sure Alpine loads properly with IE11
+window.deferLoadingAlpine = function(callback) { document.addEventListener('DOMContentLoaded', callback); }
+
 // Get deatils section show appropriate data
 var section = location.hash;
 

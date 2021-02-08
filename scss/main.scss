@@ -119,10 +119,10 @@ header nav {
 }
 
 .main-layout {
-  display:-ms-grid;
   width:100%;
   @include mq($from: tablet) {
     display:grid;
+    display:-ms-grid;
     gap:1.25rem;
     -ms-grid-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
@@ -130,10 +130,10 @@ header nav {
     grid-template-rows: auto auto auto;
   }
   @include mq($from: wide) {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
   }
   .fade {
     z-index:10;

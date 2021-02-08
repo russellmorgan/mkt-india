@@ -8,8 +8,8 @@
     crossorigin="anonymous" />
   <link href="css/tailwind-ms.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+  <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine-ie11.min.js" defer></script>
   <script src="https://kit.fontawesome.com/4b382b0d13.js" crossorigin="anonymous"></script>
   <script src="main.js"></script>
   <title>India Campus</title>
@@ -41,15 +41,15 @@
     <section>
       <div class="flex w-100 cursor-pointer btn-slideshow mb-10" x-on:click="showCarousel = true">
         <img src="img/btn-slideshow.svg" alt="view slideshow" class="mr-2">
-        View as slideshow
+        View as slideshow 
       </div>
-      <div x-show="!showCarousel"class="flex flex-wrap thumbnails" data-aos="fade-up">
+      <div x-show="showCarousel == false" class="flex flex-wrap thumbnails" data-aos="fade-up">
         <template x-for="(thumb, index) in thumbs">
           <div><img class="w-full" x-bind:src="thumb" x-on:click="activeSlide = index; showCarousel = true"></div>
         </template>
       </div>
       <div x-show="showCarousel">
-        <template x-for="(thumb, index) in thumbs" :key="thumb">
+        <template x-for="(thumb, index) in thumbs">
           <div x-on:click="showCarousel = false" x-show="activeSlide === index" class="w-full"><img x-bind:src="thumb"></div>
         </template> 
         <span class="cursor-pointer" x-on:click="carouselNav(0)">prev</span>
