@@ -78,7 +78,6 @@ header nav {
 
 .box {
   background: #99AAB9;
-  min-height: 140px;
   &--blue {
     background: #A3CAE3
   }
@@ -120,20 +119,30 @@ header nav {
 
 .main-layout {
   width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  border:1px solid red;
+  > div {
+    width:100%;
+    margin-top:1.5rem;
+  }
   @include mq($from: tablet) {
-    display:grid;
-    display:-ms-grid;
-    gap:1.25rem;
-    -ms-grid-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    > div {
+      width:calc(50% - 1.5rem);
+      margin-left:0.75rem;
+      margin-right:0.75rem;
+      margin-top:1.5rem;
+    }
   }
   @include mq($from: wide) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
+    > div {
+      width:30%;
+      margin-left:0.75rem;
+      margin-right:0.75rem;
+      margin-top:1.5rem;
+      overflow:hidden;
+      min-height:600px;
+    }
   }
   .fade {
     z-index:10;
@@ -166,31 +175,6 @@ header nav {
     max-width: 80%;
     line-height: 1;
     z-index:20;
-  }
-  // Assign grid for IE
-  #reception {
-    -ms-grid-column: 1;
-    -ms-grid-row:1
-  }
-  #office {
-    -ms-grid-column: 2;
-    -ms-grid-row:1
-  }
-  #wellness {
-    -ms-grid-column: 3;
-    -ms-grid-row:1
-  }
-  #workplace {
-    -ms-grid-column: 1;
-    -ms-grid-row:2;
-  }
-  #agile {
-    -ms-grid-column: 2;
-    -ms-grid-row:2
-  }
-  #pantry {
-    -ms-grid-column: 3;
-    -ms-grid-row:2
   }
 }
 

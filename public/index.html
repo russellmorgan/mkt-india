@@ -31,7 +31,7 @@
     </div>
   </header>
   <div class="content">
-    <section class="hdr-video">
+    <section class="hdr-video hidden">
       <div class="absolute z-10 bottom-0 left-0 w-full text-white pl-10 pb-10" data-aos="fade">
         <h1>Welcome to<br>Morgan Stanley India</h1>
         <p class="w-1/2 pb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et est sodales, convallis ante a, vestibulum lectus. Proin pharetra, tellus nec efficitur suscipit.</p>
@@ -42,67 +42,68 @@
       </video>
     </section>
     <section class="main-layout" id="grid">
-      <div class="flex flex-col mt-5" data-aos="fade-up" id="reception">
-        <div class="relative fade">
+      <div data-aos="fade-up" id="reception" class="flex flex-col">
+        <div class="relative fade flex-1">
            <h2 data-aos="fade" data-aos-duration="2000">
             <a href="detail.html" class="hover:underline">Reception</a></h2>
-          <img class="w-full" src="img/reception2.jpg" alt="wood ceiling">
+          <img src="img/reception2.jpg" alt="wood ceiling">
         </div>
-        <div class="flex mt-5">
+        <div class="mt-5 flex-1 hidden md:flex">
           <div class="w-3/12 mr-5 box box--blue"></div>
           <div class="w-9/12">
             <img src="img/reception.jpg" alt="man with pen">
           </div>
         </div>
       </div>
-      <div class="flex flex-col mt-5" data-aos="fade-up" id="office">
-        <div class="relative fade">
+      <div data-aos="fade-up" id="office" class="flex flex-col">
+        <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
             <a href="detail.html" class="hover:underline">Office Buildings</a>
           </h2>
-          <img class="w-full" src="img/building.jpg">
+          <img src="img/building.jpg" class="border-bottom">
         </div>
-        <div class="flex flex-1 mt-5 box box--jade"></div>
+        <div class="mt-5 box box--jade flex-1 hidden md:block">
+        </div>
       </div>
-      <div class="flex flex-col sm:mt-5 md:mt-0 xl:mt-5" data-aos="fade-up" id="wellness">
-        <div class="relative fade">
+      <div data-aos="fade-up" id="wellness" class="flex flex-col">
+        <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
             <a href="detail.html" class="hover:underline">Wellness & Recreation</a>
           </h2>
-          <img class="w-full" src="img/rcreation.jpg">
+          <img src="img/rcreation.jpg" class="border-bottom">
         </div>
-        <div class="flex flex-1 mt-5">
+        <div class="hidden md:flex flex-1 mt-5">
           <img class="mr-5 w-10/12" src="img/wellness.jpg" alt="woman stretching">
           <div class="box w-2/12"></div>
         </div>
       </div>
       <!-- row 2 -->
-      <div class="flex flex-col mt-5 md:mt-0" data-aos="fade-up" id="workplace">
-        <div class="relative fade">
+      <div data-aos="fade-up" class="flex flex-col" id="workplace">
+        <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
             <a href="detail.html" class="hover:underline">Conference Rooms & Workplace</a>
           </h2>
-          <img class="w-full" loading="lazy" src="img/conference.jpg" style="hheight:505px">
+          <img class="border-bottom" loading="lazy" src="img/conference.jpg" style="hheight:505px">
         </div>
-        <div class="box mt-5 flex-1"></div>
+        <div class="box mt-5 flex-1 hidden md:block"></div>
       </div>
-      <div class="flex flex-col mt-5 md:mt-0" data-aos="fade-up" id="agile">
-        <div class="relative fade">
+      <div data-aos="fade-up" class="flex flex-col" id="agile">
+        <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
             <a href="detail.html" class="hover:underline">Agile Space</a>
           </h2>
-          <img class="w-full flex-1"  loading="lazy" src="img/agile2.jpg" alt="close up of chair">
+          <img class="border-bottom" loading="lazy" src="img/agile2.jpg" alt="close up of chair">
         </div>
-        <img class="mt-5 flex-1"  loading="lazy" src="img/agile.jpg" alt="close up of desk">
+        <img class="mt-5 flex-1 hidden md:block" loading="lazy" src="img/agile.jpg" alt="close up of desk">
       </div>
-      <div class="flex flex-col mt-5 md:mt-0" data-aos="fade-up" id="pantry">
-        <div class="relative fade">
+      <div data-aos="fade-up" id="pantry" class="flex flex-col">
+        <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
             <a href="detail.html" class="hover:underline">Pantry & Cafeteria</a>
           </h2>
-          <img class="w-full" loading="lazy" src="img/pantry.jpg" alt="two chairs and table" style="hheight:340px">
+          <img class="border-bottom" loading="lazy" src="img/pantry.jpg" alt="two chairs and table">
         </div>
-        <div class="flex mt-5">
+        <div class="mt-5 flex-1 hidden md:flex">
           <div class="box box--violet mr-5 w-2/12"></div>
           <img class="w-10/12" loading="lazy" src="img/cafe.jpg" alt="cup of coffee">
         </div>
