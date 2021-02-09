@@ -118,10 +118,10 @@ header nav {
 }
 
 .main-layout {
-  width:100%;
   display:flex;
   flex-wrap: wrap;
-  border:1px solid red;
+  margin-left:-0.75rem;
+  margin-right:-0.75rem;
   > div {
     width:100%;
     margin-top:1.5rem;
@@ -129,19 +129,19 @@ header nav {
   @include mq($from: tablet) {
     > div {
       width:calc(50% - 1.5rem);
-      margin-left:0.75rem;
-      margin-right:0.75rem;
+      padding-left:0.75rem;
+      padding-right:0.75rem;
       margin-top:1.5rem;
     }
   }
   @include mq($from: wide) {
     > div {
-      width:30%;
-      margin-left:0.75rem;
-      margin-right:0.75rem;
+      width:33.3333%;
+      padding-left:0.75rem;
+      padding-right:0.75rem;
       margin-top:1.5rem;
       overflow:hidden;
-      min-height:600px;
+      min-height:640px;
     }
   }
   .fade {

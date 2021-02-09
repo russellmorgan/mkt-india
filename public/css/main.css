@@ -136,13 +136,13 @@ header nav a img {
 }
 
 .main-layout {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: 1px solid red;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 }
 
 .main-layout > div {
@@ -153,20 +153,20 @@ header nav a img {
 @media (min-width: 46.25em) {
   .main-layout > div {
     width: calc(50% - 1.5rem);
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 80em) {
   .main-layout > div {
-    width: 30%;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    width: 33.3333%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     margin-top: 1.5rem;
     overflow: hidden;
-    min-height: 600px;
+    min-height: 640px;
   }
 }
 
