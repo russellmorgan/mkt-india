@@ -39,21 +39,30 @@
       </div>
     </section>
     <section>
-      <div class="flex w-100 cursor-pointer btn-slideshow mb-10" x-on:click="showCarousel = true">
+      <div class="flex w-100 cursor-pointer btn-slideshow mb-10" x-show="showCarousel==false" x-on:click="showCarousel = true">
         <img src="img/btn-slideshow.svg" alt="view slideshow" class="mr-2">
         View as slideshow 
       </div>
       <div x-show="showCarousel == false" class="flex flex-wrap thumbnails" data-aos="fade-up">
         <template x-for="(thumb, index) in thumbs">
-          <div><img class="w-full" x-bind:src="thumb" x-on:click="activeSlide = index; showCarousel = true"></div>
+          <div><img loading="lazy" class="w-full" x-bind:src="thumb" x-on:click="activeSlide = index; showCarousel = true"></div>
         </template>
       </div>
-      <div x-show="showCarousel">
+      <div class="carousel" x-show="showCarousel">
         <template x-for="(thumb, index) in thumbs">
-          <div x-on:click="showCarousel = false" x-show="activeSlide === index" class="w-full"><img x-bind:src="thumb"></div>
+          <div x-show.transition.opacity.duration.400ms="activeSlide === index" class="w-full slide">
+            <img x-bind:src="thumb">
+            <div class="carousel__controls">
+              <div><span x-text="index+1"></span>/<span x-text="thumbs.length"></span></div><i class="fas fa-th cursor-pointer" x-on:click="showCarousel = false"></i>
+            </div>
+            <div class="carousel__info">
+              <div><img src="img/icon-info.svg"></div>
+              <span x-text="descriptions[index]"></span>
+            </div>
+          </div>
         </template> 
-        <span class="cursor-pointer" x-on:click="carouselNav(0)">prev</span>
-        <span class="cursor-pointer" x-on:click="carouselNav(1)">next</span>
+        <i class="arrow fas fa-chevron-right" x-on:click="carouselNav(1)"></i>
+        <i class="arrow fas fa-chevron-left" x-on:click="carouselNav(0)"></i>
       </div>
     </section>
     <footer class="my-20">

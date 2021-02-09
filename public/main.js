@@ -36,6 +36,17 @@ function details() {
       "img/wellness/9930608-wellrec-ss-1440x960-7.jpg",
       "img/wellness/9930608-wellrec-ss-1440x960-8.jpg",
       "img/wellness/9930608-wellrec-ss-1440x960-9.jpg"
+    ],
+    descriptions: [
+      "Slide 1 info",
+      "slide 2 desc",
+      "slide 3 more here",
+      "slide 4 another text",
+      "slide 5 is awesome",
+      "slide 6 oh hai",
+      "slide 7 do we copy?",
+      "slide 8 this is long",
+      "slide 9 finally!"
     ]
   }
 }
