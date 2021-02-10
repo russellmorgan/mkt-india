@@ -4,13 +4,23 @@ window.deferLoadingAlpine = function(callback) { document.addEventListener('DOMC
 // Get deatils section show appropriate data
 var section = location.hash;
 section = section.slice(1);
-console.log(section)
+//console.log(section)
 
 // This is where we will set up the various strings based on the hash
 var title = "Wellness & Recreation";
 
 function details() {
   return {
+    init: function(value,play) {
+      var l = this;
+      if(this.showCarousel) {
+        timer = setInterval(function() {
+          l.carouselNav(1);
+        },3000)
+      } else {
+        clearInterval(timer);
+      }
+    },
     carouselNav: function(dir) {
       if(dir == 1) {
         if(this.activeSlide === this.thumbs.length-1) {
