@@ -11,9 +11,10 @@ var title = "Wellness & Recreation";
 
 function details() {
   return {
-    init: function(value,play) {
+    init: function() {
+      console.log("init");
       var l = this;
-      if(this.showCarousel) {
+      if(this.playing) {
         timer = setInterval(function() {
           l.carouselNav(1);
         },3000)
@@ -21,7 +22,10 @@ function details() {
         clearInterval(timer);
       }
     },
-    carouselNav: function(dir) {
+    carouselNav: function(dir, event) {
+      if(event == true) {
+        this.playing = false;
+      }
       if(dir == 1) {
         if(this.activeSlide === this.thumbs.length-1) {
           this.activeSlide = 0;
@@ -46,6 +50,7 @@ function details() {
     },
     showCarousel:false,
     showDescription:false,
+    playing:false,
     activeSlide: 0,
     title:title,
     intro:"<p>Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families. We promote wellness thru various programs like mediation, yoga, mindfulness session, etc</p><p>The Mother's Room facility is available at the Indiabulls, Athena, NKP, Wework and at Ecoworld. The room is designed to afford a private lactation space for nursing mothers and resting space for expectant mothers. </p>",
