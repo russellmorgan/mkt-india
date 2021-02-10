@@ -290,7 +290,7 @@ header nav a img {
   background: rgba(0, 0, 0, 0.2);
   top: 0;
   right: 0;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -301,9 +301,13 @@ header nav a img {
 }
 
 .carousel__controls > div {
-  padding: 1.25rem 1.25rem 1.25rem 0;
-  margin-right: 1.25rem;
+  padding: 1rem 1rem 1rem 0;
+  margin-right: 1rem;
   border-right: 1px solid #ccc;
+}
+
+.carousel__controls .fa-th {
+  font-size: 1.75rem;
 }
 
 .carousel .slide {
@@ -313,7 +317,7 @@ header nav a img {
   z-index: 1;
 }
 
-.carousel .slide:after {
+.carousel .slide.active:after {
   content: '';
   position: absolute;
   z-index: 5;

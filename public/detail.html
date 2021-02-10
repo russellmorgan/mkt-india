@@ -50,10 +50,15 @@
       </div>
       <div class="carousel" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
         <template x-for="(thumb, index) in thumbs">
-          <div x-show="activeSlide === index" class="w-full slide">
+          <div x-show="activeSlide === index" class="w-full slide" :class="{'active':showDescription==true}">
             <img x-bind:src="thumb">
             <div class="carousel__controls">
-              <div><span x-text="index+1"></span>/<span x-text="thumbs.length"></span></div><i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
+              <div>
+                <span x-text="index+1"></span>/<span x-text="thumbs.length"></span>
+                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false" x-on:click="playing=true"></i>
+                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true" x-on:click="playing=false"></i>
+              </div>
+              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
             </div>
             <div class="carousel__info">
               <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
