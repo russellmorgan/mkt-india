@@ -48,7 +48,7 @@
           <div><img loading="lazy" class="w-full" x-bind:src="thumb" x-on:click="activeSlide = index; playing = true; showCarousel = true"></div>
         </template>
       </div>
-      <div class="carousel" x-ref="carousel" x-show="showCarousel">
+      <div class="carousel" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
         <template x-for="(thumb, index) in thumbs">
           <div x-show="activeSlide === index" class="w-full slide">
             <img x-bind:src="thumb">

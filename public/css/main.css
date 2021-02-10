@@ -230,7 +230,7 @@ header nav a img {
 }
 
 .carousel {
-  height: 930px;
+  min-height: 920px;
   position: relative;
 }
 
