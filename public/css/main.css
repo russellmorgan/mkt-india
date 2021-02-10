@@ -269,6 +269,19 @@ header nav a img {
   background: rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-right: 1.25rem;
+  cursor: pointer;
+}
+
+.carousel__info > div.active {
+  background: #BDB9B9;
+}
+
+.carousel__info > div.active svg #circle {
+  stroke: #4C4C4C;
+}
+
+.carousel__info > div.active svg #icon {
+  fill: #4C4C4C;
 }
 
 .carousel__controls {

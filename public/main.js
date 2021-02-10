@@ -27,7 +27,15 @@ function details() {
         }
       }
     },
+    toggleDescription: function() {
+      if(this.showDescription) {
+        this.showDescription = false;
+      } else {
+        this.showDescription = true;
+      }
+    },
     showCarousel:false,
+    showDescription:false,
     activeSlide: 0,
     title:title,
     intro:"<p>Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families. We promote wellness thru various programs like mediation, yoga, mindfulness session, etc</p><p>The Mother's Room facility is available at the Indiabulls, Athena, NKP, Wework and at Ecoworld. The room is designed to afford a private lactation space for nursing mothers and resting space for expectant mothers. </p>",
