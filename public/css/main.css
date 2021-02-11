@@ -260,11 +260,7 @@ header nav a img {
   transition: all 0.2s linear;
 }
 
-.thumbnails .thumb:hover {
-  opacity: 0.95;
-}
-
-.thumbnails .thumb:hover:after {
+.thumbnails .thumb:after {
   content: '';
   position: absolute;
   z-index: 11;
@@ -275,7 +271,7 @@ header nav a img {
   background-image: url(../img/icon-zoom.svg);
   background-repeat: no-repeat;
   background-size: 10%;
-  background-position: 95% 95%;
+  background-position: 97% 95%;
   pointer-events: none;
 }
 
