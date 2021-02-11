@@ -31,7 +31,7 @@
       </nav>
     </div>
   </header>
-  <div class="content px-10" x-data="details()" x-init="$watch('playing', function(value){init(value)})">
+  <div class="content px-10" x-data="details()" x-init="$watch('playing', function(value){init(value)})" x-on:keydown.escape.window="showCarousel = false">
     <section class="details-layout py-10">
       <div class="w-full lg:w-7/12" data-aos="fade">
         <h3 x-text="title"></h3>
@@ -39,13 +39,13 @@
       </div>
     </section>
     <section>
-      <div class="flex w-100 cursor-pointer btn-slideshow mb-10" x-show="showCarousel==false" x-on:click="playing = true; showCarousel = true">
+      <div class="hidden flex w-100 cursor-pointer btn-slideshow mb-10" x-show="showCarousel==false" x-on:click="showCarousel = true">
         <img src="img/btn-slideshow.svg" alt="view slideshow" class="mr-2">
         View as slideshow 
       </div>
       <div x-show="showCarousel == false" class="flex flex-wrap thumbnails" data-aos="fade-up">
         <template x-for="(thumb, index) in thumbs">
-          <div><img loading="lazy" class="w-full" x-bind:src="thumb" x-on:click="activeSlide = index; playing = true; showCarousel = true"></div>
+          <div><img loading="lazy" class="w-full" x-bind:src="thumb" x-on:click="activeSlide = index; showCarousel = true"></div>
         </template>
       </div>
       <div class="carousel" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
@@ -71,8 +71,8 @@
             </div>
           </div>
         </template> 
-        <i class="arrow fas fa-chevron-right" x-on:click="carouselNav(1,true)"></i>
-        <i class="arrow fas fa-chevron-left" x-on:click="carouselNav(0,true)"></i>
+        <i class="arrow fas fa-chevron-right" x-on:keydown.arrow-right.window="carouselNav(1,true)" x-on:click="carouselNav(1,true)"></i>
+        <i class="arrow fas fa-chevron-left" x-on:keydown.arrow-left.window="carouselNav(0,true)" x-on:click="carouselNav(0,true)"></i>
       </div>
     </section>
     <footer class="my-20">

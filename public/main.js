@@ -12,12 +12,11 @@ var title = "Wellness & Recreation";
 function details() {
   return {
     init: function() {
-      console.log("init");
       var l = this;
       if(this.playing) {
         timer = setInterval(function() {
           l.carouselNav(1);
-        },3000)
+        },4000)
       } else {
         clearInterval(timer);
       }
