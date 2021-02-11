@@ -65,15 +65,15 @@ function details() {
       "img/wellness/9930608-wellrec-ss-1440x960-9.jpg"
     ],
     descriptions: [
-      "Slide 1 info",
-      "slide 2 desc",
-      "slide 3 more here",
-      "slide 4 another text",
-      "slide 5 is awesome",
-      "slide 6 oh hai",
-      "slide 7 do we copy?",
-      "slide 8 this is long",
-      "slide 9 finally!"
+      "Slide 1 lorem ipsum",
+      "slide 2 lorem ipsum",
+      "slide 3 lorem ipsum",
+      "slide 4 lorem ipsum",
+      "slide 5 lorem ipsum",
+      "slide 6 lorem ipsum",
+      "slide 7 lorem ipsum",
+      "slide 8 lorem ipsum",
+      "slide 9 lorem ipsum"
     ]
   }
 }

@@ -19,7 +19,7 @@
     <div class="content flex justify-between pl-8 pr-20 relative z-10">
       <img src="img/logo-black.png" alt="Morgan Stanley">
       <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
-      <nav class="absolute top-0 right-0 z-20 flex shadow" x-show.transition="open">
+      <nav class="absolute top-0 right-0 flex shadow" x-show.transition="open">
         <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
         <a href="detail.html"><img src="img/reception2.jpg">Reception</a>
         <a href="detail.html"><img src="img/building.jpg">Office Buildings</a>
@@ -43,11 +43,13 @@
     </section>
     <section class="main-layout" id="grid">
       <div data-aos="fade-up" id="reception" class="flex flex-col">
+        <a href="detail.html#reception" class="hover:underline">
         <div class="relative fade flex-1">
            <h2 data-aos="fade" data-aos-duration="2000">
-            <a href="detail.html" class="hover:underline">Reception</a></h2>
+            Reception</h2>
           <img src="img/reception2.jpg" alt="wood ceiling">
         </div>
+        </a>
         <div class="mt-5 flex-1 hidden md:flex">
           <div class="w-3/12 mr-5 box box--blue"></div>
           <div class="w-9/12">
@@ -56,22 +58,26 @@
         </div>
       </div>
       <div data-aos="fade-up" id="office" class="flex flex-col">
+        <a href="detail.html#office" class="hover:underline">
         <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
-            <a href="detail.html" class="hover:underline">Office Buildings</a>
+            Office Buildings
           </h2>
           <img src="img/building.jpg" class="border-bottom">
         </div>
+        </a>
         <div class="mt-5 box box--jade flex-1 hidden md:block">
         </div>
       </div>
       <div data-aos="fade-up" id="wellness" class="flex flex-col">
+        <a href="detail.html#wellness" class="hover:underline">
         <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
-            <a href="detail.html" class="hover:underline">Wellness & Recreation</a>
+            Wellness & Recreation
           </h2>
           <img src="img/rcreation.jpg" class="border-bottom">
         </div>
+        </a>
         <div class="hidden md:flex flex-1 mt-5">
           <img class="mr-5 w-10/12" src="img/wellness.jpg" alt="woman stretching">
           <div class="box w-2/12"></div>
@@ -79,30 +85,36 @@
       </div>
       <!-- row 2 -->
       <div data-aos="fade-up" class="flex flex-col" id="workplace">
+        <a href="detail.html#workplace" class="hover:underline">
         <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
-            <a href="detail.html" class="hover:underline">Conference Rooms & Workplace</a>
+            Conference Rooms & Workplace
           </h2>
           <img class="border-bottom" loading="lazy" src="img/conference.jpg" style="hheight:505px">
         </div>
+        </a>
         <div class="box mt-5 flex-1 hidden md:block"></div>
       </div>
       <div data-aos="fade-up" class="flex flex-col" id="agile">
+        <a href="detail.html#agile" class="hover:underline">
         <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
-            <a href="detail.html" class="hover:underline">Agile Space</a>
+            Agile Space
           </h2>
           <img class="border-bottom" loading="lazy" src="img/agile2.jpg" alt="close up of chair">
         </div>
+        </a>
         <img class="mt-5 flex-1 hidden md:block" loading="lazy" src="img/agile.jpg" alt="close up of desk">
       </div>
       <div data-aos="fade-up" id="pantry" class="flex flex-col">
+        <a href="detail.html#pantry" class="hover:underline">
         <div class="relative fade overflow-hidden">
           <h2 data-aos="fade" data-aos-duration="2000">
-            <a href="detail.html" class="hover:underline">Pantry & Cafeteria</a>
+            Pantry & Cafeteria
           </h2>
           <img class="border-bottom" loading="lazy" src="img/pantry.jpg" alt="two chairs and table">
         </div>
+        </a>
         <div class="mt-5 flex-1 hidden md:flex">
           <div class="box box--violet mr-5 w-2/12"></div>
           <img class="w-10/12" loading="lazy" src="img/cafe.jpg" alt="cup of coffee">

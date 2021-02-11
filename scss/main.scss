@@ -28,11 +28,17 @@ p {
 
 header {
 border-bottom:1px solid #979797;
+z-index:100;
+position:relative;
   img {
     max-height:33px;
   }
   #menu-close {
-    color:#979797;
+  transition:all 0.2s linear;
+    &:hover {
+      color:#979797;
+      transform:scale(1.1);
+    }
   }
 }
 
@@ -49,6 +55,7 @@ header nav {
   padding:3rem 3rem 1.75rem 3rem;
   max-width:700px;
   flex-wrap: wrap;
+  z-index:100;
   a {
     display:flex;
     align-items: center;
@@ -209,6 +216,8 @@ header nav {
 }
 
 .carousel {
+  //height:680px;
+  overflow:hidden;
   min-height:920px;
   position:relative;
   .arrow.fas {
@@ -281,7 +290,7 @@ header nav {
   }
   .slide {
     position:absolute;
-    top:0;
+    top:0px;
     left:0;
     z-index:1;
     &.active {
