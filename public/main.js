@@ -12,6 +12,7 @@ var title = "Wellness & Recreation";
 function details() {
   return {
     init: function() {
+      var timer;
       var l = this;
       if(this.playing) {
         timer = setInterval(function() {
@@ -48,7 +49,7 @@ function details() {
       }
     },
     showCarousel:false,
-    showDescription:false,
+    showDescription:true,
     playing:false,
     activeSlide: 0,
     title:title,

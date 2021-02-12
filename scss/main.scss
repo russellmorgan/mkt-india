@@ -176,18 +176,25 @@ header nav {
   }
   .fade {
     z-index:10;
-    transition:all 0.2s ease;
+    img {
+      transition:all 1s ease;
+      position: relative;
+      z-index:11;
+    }
     cursor:pointer;
     &:before {
       content: '';
       position: absolute;
       width:100%;
       height:100%;
+      z-index:20;
       background: rgb(0,0,0);
       background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,17,18,0) 59%); 
     }
     &:hover {
-      transform:scale(1.02);
+      img {
+        transform:scale(1.2);
+      }
       &:before {
         background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,17,18,0) 59%); 
       }

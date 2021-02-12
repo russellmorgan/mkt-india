@@ -201,9 +201,14 @@ header nav a img {
 
 .main-layout .fade {
   z-index: 10;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   cursor: pointer;
+}
+
+.main-layout .fade img {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
+  z-index: 11;
 }
 
 .main-layout .fade:before {
@@ -211,14 +216,15 @@ header nav a img {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 20;
   background: black;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(59%, rgba(0, 17, 18, 0)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 17, 18, 0) 59%);
 }
 
-.main-layout .fade:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+.main-layout .fade:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .main-layout .fade:hover:before {
