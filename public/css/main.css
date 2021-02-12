@@ -190,7 +190,12 @@ header nav a img {
     padding-right: 0.75rem;
     margin-top: 1.5rem;
     overflow: hidden;
-    min-height: 640px;
+  }
+}
+
+@media all and (min-width: 80em) and (-ms-high-contrast: none), (min-width: 80em) and (-ms-high-contrast: active) {
+  .main-layout > div {
+    min-height: 700px;
   }
 }
 

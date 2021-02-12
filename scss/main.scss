@@ -1,6 +1,14 @@
 // Responsive helper
 @import 'mq';
 
+//IE11 specific styles
+@mixin target-metro {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -161,7 +169,9 @@ header nav {
       padding-right:0.75rem;
       margin-top:1.5rem;
       overflow:hidden;
-      min-height:640px;
+      @include target-metro {
+        min-height:700px;
+      }
     }
   }
   .fade {
