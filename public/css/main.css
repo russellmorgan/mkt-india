@@ -174,9 +174,15 @@ header nav a img {
   margin-top: 1.5rem;
 }
 
+@media (max-width: 46.24em) {
+  .main-layout > div {
+    max-height: 265px;
+  }
+}
+
 @media (min-width: 46.25em) {
   .main-layout > div {
-    width: calc(50% - 1.5rem);
+    width: 50%;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     margin-top: 1.5rem;
