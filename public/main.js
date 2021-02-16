@@ -8,11 +8,11 @@ section = section.slice(1);
 
 // This is where we will set up the various strings based on the hash
 var title = "Wellness & Recreation";
+var timer;
 
 function details() {
   return {
     init: function() {
-      var timer;
       var l = this;
       if(this.playing) {
         timer = setInterval(function() {

@@ -81,6 +81,7 @@ header nav {
       width:92px;
       height:92px;
       max-height:92px;
+      flex-shrink: 0;
     }
   }
 }
@@ -256,9 +257,9 @@ header nav {
 }
 
 .carousel {
-  //height:680px;
+  height:680px;
   overflow:hidden;
-  min-height:920px;
+  //min-height:920px;
   position:relative;
   .arrow.fas {
     color:#fff;
@@ -333,6 +334,7 @@ header nav {
     top:0px;
     left:0;
     z-index:1;
+    max-height:680px;
     &.active {
       &:after {
         content:'';
@@ -344,6 +346,14 @@ header nav {
         right:0;
         bottom:0;
       }
+    }
+    img {
+      position:relative;
+      animation-name: slideAnim;
+      animation-duration: 4s;
+      animation-delay:0.4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
   }
 }
@@ -403,4 +413,14 @@ header nav {
   src: url("../fonts/ms_gloriola_ii_std_medium-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_std_medium-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_std_medium-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+//Animation
+@keyframes slideAnim {
+  from {
+    transform: scale(1) translate(0,0);
+  }
+  to {
+    transform: scale(1.2) translate(0,-3%);
+  }
 }

@@ -17,17 +17,17 @@
 
 <body>
   <header class="py-10" x-data="{open:false}">
-    <div class="content flex justify-between px-10 relative z-10">
+    <div class="content flex justify-between px-10 relative z-10 relative">
       <a href="index.html"><img src="img/logo-black.png" alt="Morgan Stanley"></a>
-      <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
+      <i class="text-3xl fas fa-bars cursor-pointer absolute right-0" x-on:click="open=true"></i>
       <nav class="absolute top-0 right-0 z-20 flex shadow" x-show.transition="open">
         <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
-        <a href="detail.html"><img src="img/reception2.jpg">Reception</a>
-        <a href="detail.html"><img src="img/building.jpg">Office Buildings</a>
-        <a href="detail.html"><img src="img/rcreation.jpg">Wellness & Recreation</a>
-        <a href="detail.html"><img src="img/conference.jpg">Conference Rooms & Workplace</a>
-        <a href="detail.html"><img src="img/agile2.jpg">Agile Spaces</a>
-        <a href="detail.html"><img src="img/pantry.jpg">Pantry & Cafeteria</a>
+        <a href="detail.html"><img src="img/menu_reception@2x.png">Reception</a>
+        <a href="detail.html"><img src="img/menu_building@2x.png">Office Buildings</a>
+        <a href="detail.html"><img src="img/menu_wellness@2x.png">Wellness & Recreation</a>
+        <a href="detail.html"><img src="img/menu_workplace@2x.png">Conference Rooms & Workplace</a>
+        <a href="detail.html"><img src="img/menu_agile@2x.png">Agile Spaces</a>
+        <a href="detail.html"><img src="img/menu_pantry@2x.png">Pantry & Cafeteria</a>
       </nav>
     </div>
   </header>
