@@ -16,11 +16,11 @@
 </head>
 
 <body>
-  <header class="py-10" x-data="{open:false}">
-    <div class="content flex justify-between px-10 relative z-10 relative">
+  <header class="py-6 lg:py-10 border-0" x-data="{open:false}">
+    <div class="content flex justify-between items-center px-5 lg:px-10 relative z-10">
       <a href="index.html"><img src="img/logo-black.png" alt="Morgan Stanley"></a>
-      <i class="text-3xl fas fa-bars cursor-pointer absolute right-0" x-on:click="open=true"></i>
-      <nav class="absolute top-0 right-0 z-20 flex shadow" x-show.transition="open">
+      <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
+      <nav class="absolute top-0 right-0 shadow" x-show.transition="open">
         <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
         <a href="detail.html"><img src="img/menu_reception@2x.png">Reception</a>
         <a href="detail.html"><img src="img/menu_building@2x.png">Office Buildings</a>
@@ -31,7 +31,7 @@
       </nav>
     </div>
   </header>
-  <div class="content px-10" x-data="details()" x-init="$watch('playing', function(value){init(value)})" x-on:keydown.escape.window="showCarousel = false">
+  <div class="content px-5 lg:px-10" x-data="details()" x-init="$watch('playing', function(value){init(value)})" x-on:keydown.escape.window="showCarousel = false">
     <section class="details-layout py-10">
       <div class="w-full lg:w-7/12" data-aos="fade">
         <h3 x-text="title"></h3>

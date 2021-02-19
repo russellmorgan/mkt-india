@@ -15,6 +15,7 @@ body {
 
 h1, h2, h3 {
   font-family: 'ms_gloriola_ii_std_semibold';
+  line-height: 1.1;
 }
 
 h3 {
@@ -30,6 +31,7 @@ header {
   border-bottom: 1px solid #979797;
   z-index: 100;
   position: relative;
+  min-height: 78px;
 }
 
 header img {
