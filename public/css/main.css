@@ -33,7 +33,13 @@ header {
 }
 
 header img {
-  max-height: 33px;
+  max-height: 23px;
+}
+
+@media (min-width: 61.25em) {
+  header img {
+    max-height: 33px;
+  }
 }
 
 header #menu-close {
@@ -58,11 +64,21 @@ footer > div .fa-circle {
 
 header nav {
   background: #fff;
-  padding: 3rem 3rem 1.75rem 3rem;
-  max-width: 700px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 3rem 1rem 1rem 1rem;
   z-index: 100;
+  width: 60%;
+}
+
+@media (min-width: 61.25em) {
+  header nav {
+    max-width: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 3rem 3rem 1.75rem 3rem;
+  }
 }
 
 header nav a {
@@ -75,8 +91,13 @@ header nav a {
   font-family: 'karlabold';
   margin-right: 1rem;
   padding-right: 1rem;
-  width: calc(50% - 1rem);
   margin-bottom: 1.25rem;
+}
+
+@media (min-width: 61.25em) {
+  header nav a {
+    width: calc(50% - 1rem);
+  }
 }
 
 header nav a:hover {
@@ -91,6 +112,12 @@ header nav a img {
   max-height: 92px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+@media (max-width: 46.24em) {
+  header nav a img {
+    display: none;
+  }
 }
 
 .content {
@@ -126,12 +153,18 @@ header nav a img {
 .hdr-video {
   overflow: hidden;
   width: 100%;
-  background: #ccc;
   position: relative;
   height: 0;
   overflow: hidden;
   padding-top: 56.25%;
   z-index: 10;
+}
+
+@media (max-width: 46.24em) {
+  .hdr-video {
+    padding-top: 0;
+    height: auto;
+  }
 }
 
 .hdr-video:after {
@@ -155,20 +188,34 @@ header nav a img {
   z-index: 5;
 }
 
+@media (max-width: 46.24em) {
+  .hdr-video video {
+    position: relative;
+  }
+}
+
 .hdr-video h1 {
   color: #fff;
   font-size: 3.375rem;
   line-height: 1;
 }
 
-.main-layout {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+@media (max-width: 46.24em) {
+  .hdr-video h1 {
+    font-size: 1.625rem;
+  }
+}
+
+@media (min-width: 46.25em) {
+  .main-layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
 }
 
 .main-layout > div {
@@ -179,6 +226,7 @@ header nav a img {
 @media (max-width: 46.24em) {
   .main-layout > div {
     max-height: 265px;
+    width: 100%;
   }
 }
 
@@ -253,6 +301,12 @@ header nav a img {
   max-width: 80%;
   line-height: 1;
   z-index: 20;
+}
+
+@media (max-width: 46.24em) {
+  .main-layout .fade > h2 {
+    font-size: 1.625rem;
+  }
 }
 
 .btn-slideshow {

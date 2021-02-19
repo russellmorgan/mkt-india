@@ -15,11 +15,11 @@
 </head>
 
 <body>
-  <header class="py-10 border-0" x-data="{open:false}">
-    <div class="content flex justify-between pl-8 pr-20 relative z-10">
+  <header class="py-6 lg:py-10 border-0" x-data="{open:false}">
+    <div class="content flex justify-between items-center px-5 lg:px-10 relative z-10">
       <img src="img/logo-black.png" alt="Morgan Stanley">
-      <i class="text-3xl fas fa-bars cursor-pointer absolute right-0" x-on:click="open=true"></i>
-      <nav class="absolute top-0 right-0 flex shadow" x-show.transition="open">
+      <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
+      <nav class="absolute top-0 right-0 shadow" x-show.transition="open">
         <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
         <a href="detail.html"><img src="img/menu_reception@2x.png">Reception</a>
         <a href="detail.html"><img src="img/menu_building@2x.png">Office Buildings</a>
@@ -32,13 +32,16 @@
   </header>
   <div class="content">
     <section class="hdr-video">
-      <div class="absolute z-20 bottom-0 left-0 w-full text-white pl-10 pb-10" data-aos="fade">
+      <div class="absolute z-20 bottom-0 left-0 w-full text-white pl-5 lg:pl-10 pb-10" data-aos="fade">
         <h1>Welcome to<br>Morgan Stanley India</h1>
-        <p class="w-1/2 pb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et est sodales, convallis ante a, vestibulum lectus. Proin pharetra, tellus nec efficitur suscipit.</p>
+        <p class="w-10/12 md:w-1/2 pb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et est sodales, convallis ante a, vestibulum lectus. Proin pharetra, tellus nec efficitur suscipit.</p>
         <a href="#grid"><div class="text-center flex flex-col text-sm"><em>Take the Tour</em><i class="fas fa-chevron-down animate-bounce"></i></div></a>
       </div>
-      <video width="100%" height="auto" muted>
+      <video width="100%" height="auto" muted loop playsinline class="hidden md:block">
         <source src="video/marketing-india.mp4" type="video/mp4">
+      </video>
+      <video width="100%" height="auto" muted autoplay playsinline class="md:hidden">
+        <source src="video/marketing-india-mobile.mp4" type="video/mp4">
       </video>
     </section>
     <section class="main-layout" id="grid">
@@ -144,7 +147,7 @@
     integrity="sha512-tnNM6PPNOVfZ5sGPw6hThCrcUBeqt2mVEk3EAj8tCtuMHqbuVm5/HsZagrr8W2aaFE+6rKIByGwQbEnmodrYVg=="
     crossorigin="anonymous"></script>
   <script>
-    AOS.init({ duration: 800 });
+    AOS.init({ duration: 800, disabled:"mobile" });
   </script>
 </body>
 
