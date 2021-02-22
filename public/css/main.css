@@ -404,8 +404,18 @@ header nav a img {
   transition: all 0.2s linear;
 }
 
+.carousel__info > div svg {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 .carousel__info > div:hover {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel__info > div:hover svg {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .carousel__info > div.active {
@@ -434,6 +444,16 @@ header nav a img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.carousel__controls .fas {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.carousel__controls .fas:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .carousel__controls > div {
@@ -468,16 +488,6 @@ header nav a img {
 
 .carousel .slide img {
   position: relative;
-  -webkit-animation-name: slideAnim;
-          animation-name: slideAnim;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 @font-face {
@@ -534,27 +544,5 @@ header nav a img {
   src: url("../fonts/ms_gloriola_ii_std_medium-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_std_medium-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_std_medium-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-
-@-webkit-keyframes slideAnim {
-  from {
-    -webkit-transform: scale(1) translate(0, 0);
-            transform: scale(1) translate(0, 0);
-  }
-  to {
-    -webkit-transform: scale(1.2) translate(0, -3%);
-            transform: scale(1.2) translate(0, -3%);
-  }
-}
-
-@keyframes slideAnim {
-  from {
-    -webkit-transform: scale(1) translate(0, 0);
-            transform: scale(1) translate(0, 0);
-  }
-  to {
-    -webkit-transform: scale(1.2) translate(0, -3%);
-            transform: scale(1.2) translate(0, -3%);
-  }
 }
 /*# sourceMappingURL=main.css.map */

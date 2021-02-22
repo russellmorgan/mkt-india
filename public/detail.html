@@ -50,7 +50,7 @@
       </div>
       <div class="carousel" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
         <template x-for="(thumb, index) in thumbs">
-          <div x-show="activeSlide === index" class="w-full slide" :class="{'active':showDescription==true}">
+          <div x-show.immediate.transition.opacity.duration.1500ms="activeSlide === index" class="w-full slide" :class="{'active':showDescription==true}">
             <img x-bind:src="thumb">
             <div class="carousel__controls">
               <div>

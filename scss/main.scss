@@ -325,8 +325,14 @@ header nav {
       margin-right:1.25rem;
       cursor:pointer;
       transition:all 0.2s linear;
+      svg {
+        transition:all 0.2s linear;
+      }
       &:hover {
         background:rgba(0,0,0,0.3);
+        svg {
+          transform: scale(1.05);
+        }
       }
       &.active {
         background:#BDB9B9;
@@ -349,6 +355,12 @@ header nav {
     color:#fff;
     display:flex;
     align-items: center;
+    .fas {
+      transition: all 0.2s linear;
+      &:hover {
+        transform:scale(1.1);
+      }
+    }
     > div {
       padding:1rem 1rem 1rem 0;
       margin-right:1rem;
@@ -378,11 +390,6 @@ header nav {
     }
     img {
       position:relative;
-      animation-name: slideAnim;
-      animation-duration: 4s;
-      animation-delay:0.4s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
     }
   }
 }
@@ -442,14 +449,4 @@ header nav {
   src: url("../fonts/ms_gloriola_ii_std_medium-webfont.eot") format("embedded-opentype"), url("../fonts/ms_gloriola_ii_std_medium-webfont.woff") format("woff"), url("../fonts/ms_gloriola_ii_std_medium-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-
-//Animation
-@keyframes slideAnim {
-  from {
-    transform: scale(1) translate(0,0);
-  }
-  to {
-    transform: scale(1.2) translate(0,-3%);
-  }
 }
