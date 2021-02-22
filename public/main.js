@@ -66,15 +66,15 @@ function details() {
       "img/wellness/9930608-wellrec-ss-1440x960-9.jpg"
     ],
     descriptions: [
-      "Slide 1 lorem ipsum",
-      "slide 2 lorem ipsum",
-      "slide 3 lorem ipsum",
-      "slide 4 lorem ipsum",
-      "slide 5 lorem ipsum",
-      "slide 6 lorem ipsum",
-      "slide 7 lorem ipsum",
-      "slide 8 lorem ipsum",
-      "slide 9 lorem ipsum"
+      "Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families.",
+      "Morgan Stanley  promote wellness thru various programs like mediation, yoga, mindfulness session, etc.",
+      "The India  Sports Committee drives sport-related events for Mumbai and Bengaluru employees.",
+      "The India Wellness Committee aims to raise awareness on health and general well-being of our employees. ",
+      "The firm provide wellness benefits such as Company Doctor, Flu Vaccination, Gym Benefit, Meditation App, Travel benefit for expecting mother",
+      "As part of our commitment to helping all employees maintain a healthy work-life balance, we have established corporate gym memberships",
+      "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+      "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+      "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
     ]
   }
 }
