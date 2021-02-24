@@ -4,7 +4,10 @@ window.deferLoadingAlpine = function(callback) { document.addEventListener('DOMC
 // Get deatils section show appropriate data
 var section = location.hash;
 section = section.slice(1);
-//console.log(section)
+
+window.addEventListener('hashchange', function() {
+  document.location.reload(true)
+}, false);
 
 // This is where we will set up the various strings based on the hash
 var title, intro, thumbs, descriptions;
@@ -54,8 +57,109 @@ if(section) {
         "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
       ];
       break;
+    case "agile":
+      title = "Agile Space";
+      intro = "The Firm launched the Workplace Evolution program in early 2018 with a focus on modernizing our workspace to better support business priorities, and improving the employee experience. To enable this, we harnessed the power of workspace design, innovative technology and end user experience that supports our staff in delivering first class business in a first class way.";
+      thumbs = [
+        "img/agile/9930608-agile-ss-1440x960-1.jpg",
+        "img/agile/9930608-agile-ss-1440x960-2.jpg",
+        "img/agile/9930608-agile-ss-1440x960-3.jpg",
+        "img/agile/9930608-agile-ss-1440x960-4.jpg",
+        "img/agile/9930608-agile-ss-1440x960-5.jpg",
+        "img/agile/9930608-agile-ss-1440x960-6.jpg",
+        "img/agile/9930608-agile-ss-1440x960-7.jpg",
+        "img/agile/9930608-agile-ss-1440x960-8.jpg",
+        "img/agile/9930608-agile-ss-1440x960-9.jpg",
+        "img/agile/9930608-agile-ss-1440x960-10.jpg",
+        "img/agile/9930608-agile-ss-1440x960-11.jpg",
+        "img/agile/9930608-agile-ss-1440x960-12.jpg",
+        "img/agile/9930608-agile-ss-1440x960-13.jpg",
+        "img/agile/9930608-agile-ss-1440x960-14.jpg",
+        "img/agile/9930608-agile-ss-1440x960-15.jpg",
+        "img/agile/9930608-agile-ss-1440x960-16.jpg",
+        "img/agile/9930608-agile-ss-1440x960-17.jpg",
+      ];
+      descriptions = [
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+      ];
+      break;
+    case "office":
+      title = "Office Buildings";
+      intro = "Welcome to Morgan Stanley India";
+      thumbs = [
+        "img/building/9930608-building-ss-1440x960-1.jpg",
+        "img/building/9930608-building-ss-1440x960-2.jpg",
+        "img/building/9930608-building-ss-1440x960-3.jpg",
+        "img/building/9930608-building-ss-1440x960-4.jpg",
+        "img/building/9930608-building-ss-1440x960-5.jpg",
+        "img/building/9930608-building-ss-1440x960-6.jpg",
+        "img/building/9930608-building-ss-1440x960-7.jpg",
+        "img/building/9930608-building-ss-1440x960-8.jpg",
+        "img/building/9930608-building-ss-1440x960-9.jpg",
+        "img/building/9930608-building-ss-1440x960-10.jpg",
+        "img/building/9930608-building-ss-1440x960-11.jpg",
+      ];
+      descriptions = [
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+      ];
+      break; 
+    case "pantry":
+      title = "Pantry & Cafeteria";
+      intro = "Cafteria caters a wide range of food options. Breakfast, Lunch are Snacks are served. The floor pantries are located in all locations and has a self services Tea/Coffee machines and a snack vending machine";
+      thumbs = [
+        "img/pantry/9930608-pantry-ss-1440x960-1.jpg",
+        "img/pantry/9930608-pantry-ss-1440x960-2.jpg",
+        "img/pantry/9930608-pantry-ss-1440x960-3.jpg",
+        "img/pantry/9930608-pantry-ss-1440x960-4.jpg"
+      ];
+      descriptions = [
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+      ];
+      break;    
+    case "workplace":
+      title = "Conference Rooms & Workplace";
+      intro = "Our Workplace is designed to have more team collobaration, increase employee experience, improve employee productivity, and retains and grows our employee talent. The firm also lauched the Workplace Evolution program in early 2018 with a focus on modernizing our workspace to better support business priorities, and improving the employee experience.  The workplace floor has standard office, meeting and video confernce rooms huddle space, actiity area and a pantry.";  
+      thumbs = [
+        "img/workspace/9930608-wrkconf-ss-1440x960-1.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-2.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-3.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-4.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-5.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-6.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-7.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-8.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-9.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-10.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-11.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-12.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-13.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-14.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-15.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-16.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-17.jpg",
+        "img/workspace/9930608-wrkconf-ss-1440x960-18.jpg",
+      ];
+      descriptions = [
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+      ];
+      break;
     default:
-      title = "nothing";  
+      title = "title missing";
+      intro = "intro missing";
+      thumbs = [],
+      descriptions = [];
   }
 }
 
