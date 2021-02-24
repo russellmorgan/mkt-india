@@ -7,8 +7,59 @@ section = section.slice(1);
 //console.log(section)
 
 // This is where we will set up the various strings based on the hash
-var title = "Wellness & Recreation";
+var title, intro, thumbs, descriptions;
 var timer;
+
+if(section) {
+  switch(section) {
+    case "wellness":
+      title = "Wellness & Recreation";
+      intro = "Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families. We promote wellness thru various programs like mediation, yoga, mindfulness session, etc.<p>The Mother's Room facility is available at the Indiabulls, Athena, NKP, Wework and at Ecoworld. The room is designed to afford a private lactation space for nursing mothers and resting space for expectant mothers.";
+      thumbs = [
+        "img/wellness/9930608-wellrec-ss-1440x960-1.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-2.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-3.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-4.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-5.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-6.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-7.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-8.jpg",
+        "img/wellness/9930608-wellrec-ss-1440x960-9.jpg"
+      ];
+      descriptions = [
+        "Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families.",
+        "Morgan Stanley  promote wellness thru various programs like mediation, yoga, mindfulness session, etc.",
+        "The India  Sports Committee drives sport-related events for Mumbai and Bengaluru employees.",
+        "The India Wellness Committee aims to raise awareness on health and general well-being of our employees. ",
+        "The firm provide wellness benefits such as Company Doctor, Flu Vaccination, Gym Benefit, Meditation App, Travel benefit for expecting mother",
+        "As part of our commitment to helping all employees maintain a healthy work-life balance, we have established corporate gym memberships",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+      ];
+      break;
+    case "reception":
+      title = "Reception";
+      intro = "Long-term and enduring success lies in having a strong culture and talented employees who live our values. At Morgan Stanley, our culture guides our employees, and our values inform everything we do. &mdash;James P. Gorman,  Chairman and CEO ";
+      thumbs = [
+        "img/reception/9930608-reception-ss-1440x960-1.jpg",
+        "img/reception/9930608-reception-ss-1440x960-2.jpg",
+        "img/reception/9930608-reception-ss-1440x960-3.jpg",
+        "img/reception/9930608-reception-ss-1440x960-4.jpg"
+      ];
+      descriptions = [
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
+        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+      ];
+      break;
+    default:
+      title = "nothing";  
+  }
+}
+
+
 
 function details() {
   return {
@@ -53,28 +104,8 @@ function details() {
     playing:false,
     activeSlide: 0,
     title:title,
-    intro:"<p>Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families. We promote wellness thru various programs like mediation, yoga, mindfulness session, etc</p><p>The Mother's Room facility is available at the Indiabulls, Athena, NKP, Wework and at Ecoworld. The room is designed to afford a private lactation space for nursing mothers and resting space for expectant mothers. </p>",
-    thumbs: [
-      "img/wellness/9930608-wellrec-ss-1440x960-1.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-2.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-3.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-4.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-5.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-6.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-7.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-8.jpg",
-      "img/wellness/9930608-wellrec-ss-1440x960-9.jpg"
-    ],
-    descriptions: [
-      "Morgan Stanley is committed to supporting and enhancing the physical and emotional health and wellbeing of our employees and their families.",
-      "Morgan Stanley  promote wellness thru various programs like mediation, yoga, mindfulness session, etc.",
-      "The India  Sports Committee drives sport-related events for Mumbai and Bengaluru employees.",
-      "The India Wellness Committee aims to raise awareness on health and general well-being of our employees. ",
-      "The firm provide wellness benefits such as Company Doctor, Flu Vaccination, Gym Benefit, Meditation App, Travel benefit for expecting mother",
-      "As part of our commitment to helping all employees maintain a healthy work-life balance, we have established corporate gym memberships",
-      "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-      "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-      "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
-    ]
+    intro:intro,
+    thumbs: thumbs,
+    descriptions: descriptions
   }
 }
