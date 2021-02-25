@@ -51,10 +51,10 @@ if(section) {
         "img/reception/9930608-reception-ss-1440x960-4.jpg"
       ];
       descriptions = [
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+        "At Morgan Stanley, our culture guides our employees, and our values inform everything we do. ",
+        "Mumbai GIC footprint has spread across five buildings in three separate locations with approximately 5,000 employees",
+        "Mumbai Office",
+        "Mumbai Office"
       ];
       break;
     case "agile":
@@ -119,10 +119,10 @@ if(section) {
         "img/pantry/9930608-pantry-ss-1440x960-4.jpg"
       ];
       descriptions = [
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+        "Our Bangalore and Mumbai office caters wide range of Food and Beverages. Veg, Non Veg, Packed Snacks and early dinner are offered.",
+        "All Caferterias and Pantries are designed with good interiors, lightings, space and has a good opportunity for networking.",
+        "Pantries are located on all the floors and that can be used for dining and informal gatherings",
+        "Our agile floor provide lot of colloboration space to improve employee engagement and experience"
       ];
       break;    
     case "workplace":
@@ -149,10 +149,25 @@ if(section) {
         "img/workspace/9930608-wrkconf-ss-1440x960-18.jpg",
       ];
       descriptions = [
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office",
-        "Fitness classes conducted by 3rd Party vendor at MS Mumbai Office"
+        "The Agile spaces are designed to be more flexible, using laptops and height-adjustable desks that allow you to stand and adjust for ergonomic needs.",
+        "Meeting rooms are available at every floor and include a mix of sizes.  Some of the rooms are VC enabled for meetings.",
+        "Our workspace is designed for more collaboration and facilitates the faster learning for new hires.",
+        "Our Workspace is designed to provide open space to colloborate and work effectively.",
+        "The workplace floor has standard office, meeting and video confernce rooms huddel space, actiity area and a pantry",
+        "The workplace floor has standard office, meeting and video confernce rooms huddel space, actiity area and a pantry",
+        "Focus rooms and huddle spaces are availble for quick meetings and informal meetings.",
+        "The workplace offers offices, various closed meeting rooms, huddle areas ,  video enabled conference rooms and training rooms.",
+        "tbd",
+        "Our Workplace is designed to have more team collobaration, increase employee experience, improve employee productivity, and retains and grows our employee talent.",
+        "tbd",
+        "tbd",
+        "The workplace offers offices, various closed meeting rooms, huddle areas ,  video enabled conference rooms and training rooms.",
+        "The firm also lauched the Workplace Evolution program in early 2018 with a focus on modernizing our workspace to better support business priorities, and improving the employee experience.",
+        "As part of Employee Physical wellbeing, the frim has provided Ergonomic Chairs and Dual Monitors.",
+        "tbd",
+        "tbd",
+        "tbd",
+        "tbd"
       ];
       break;
     default:
