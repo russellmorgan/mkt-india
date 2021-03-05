@@ -181,8 +181,10 @@ function details(section) {
     toggleDescription: function() {
       if(this.showDescription) {
         this.showDescription = false;
+        document.querySelector(".carousel").classList.remove("active");
       } else {
         this.showDescription = true;
+        document.querySelector(".carousel").classList.add("active");
       }
     },
     showCarousel:false,

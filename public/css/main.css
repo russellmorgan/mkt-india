@@ -370,6 +370,18 @@ header nav a img {
   position: relative;
 }
 
+.carousel.active .slide:after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 17, 18, 0.8)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 17, 18, 0.8) 90%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .carousel .arrow.fas {
   color: #fff;
   position: absolute;
@@ -480,18 +492,6 @@ header nav a img {
   z-index: 1;
   max-height: 680px;
   min-width: 100%;
-}
-
-.carousel .slide.active:after {
-  content: '';
-  position: absolute;
-  z-index: 5;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 17, 18, 0.8)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 17, 18, 0.8) 90%);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .carousel .slide img {

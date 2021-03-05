@@ -37,7 +37,9 @@
   </header>
   <div class="content px-5 lg:px-10" x-data="details('wellness')" 
   x-init="$watch('playing', function(value) {autoplay(value)})"
-  x-on:keydown.escape.window="showCarousel = false">
+  x-on:keydown.escape.window="showCarousel = false"
+  x-on:keydown.arrow-right.window="embla.scrollNext(false)"
+  x-on:keydown.arrow-left.window="embla.scrollPrev(false)">
     <section class="details-layout py-10">
       <div class="w-full lg:w-7/12" data-aos="fade">
         <h3 x-text="title"></h3>
@@ -59,7 +61,7 @@
         </template>
       </div>
       <!-- detail carousel -->
-      <div class="carousel embla" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
+      <div class="carousel embla active" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
         <div class="embla__container">
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[0]">
