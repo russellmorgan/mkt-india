@@ -354,13 +354,19 @@ header nav a img {
   opacity: 0.8;
 }
 
-.carousel {
-  height: 680px;
+.carousel-container {
+  height: 660px;
   overflow: hidden;
   position: relative;
 }
 
-.carousel .arrow.fas {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .carousel-container {
+    height: 680px;
+  }
+}
+
+.carousel-container .arrow.fas {
   color: #fff;
   position: absolute;
   z-index: 10;
@@ -373,14 +379,26 @@ header nav a img {
   transition: all 0.3s linear;
 }
 
-.carousel .arrow.fas:hover {
+.carousel-container .arrow.fas:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   opacity: 1;
 }
 
-.carousel .arrow.fas.fa-chevron-right {
+.carousel-container .arrow.fas.fa-chevron-right {
   right: 0;
+}
+
+.carousel {
+  height: 680px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .carousel__info {
@@ -466,11 +484,12 @@ header nav a img {
 }
 
 .carousel .slide {
-  position: absolute;
-  top: 0px;
-  left: 0;
+  position: relative;
   z-index: 1;
   max-height: 680px;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .carousel .slide.active:after {
@@ -487,6 +506,21 @@ header nav a img {
 
 .carousel .slide img {
   position: relative;
+}
+
+.snap {
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.snap::-webkit-scrollbar {
+  display: none;
+}
+
+.snap > div {
+  scroll-snap-align: center;
 }
 
 @font-face {

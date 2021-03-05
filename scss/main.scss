@@ -290,11 +290,13 @@ header nav {
   }
 }
 
-.carousel {
-  height:680px;
+.carousel-container {
+  height:660px;
   overflow:hidden;
-  //min-height:920px;
-  position:relative;
+  position: relative;
+  @include target-metro {
+    height:680px;
+  }
   .arrow.fas {
     color:#fff;
     position:absolute;
@@ -313,7 +315,14 @@ header nav {
       right:0;
     }
   }
-
+}
+.carousel {
+  height:680px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  position:relative;
+  display:flex;
+  flex-wrap: nowrap;
   &__info {
     position:absolute;
     z-index:10;
@@ -375,11 +384,11 @@ header nav {
     }
   }
   .slide {
-    position:absolute;
-    top:0px;
-    left:0;
+    position:relative;
     z-index:1;
     max-height:680px;
+    width:100%;
+    flex-shrink: 0;
     &.active {
       &:after {
         content:'';
@@ -396,6 +405,21 @@ header nav {
       position:relative;
     }
   }
+}
+
+// Snapping styles for carousel
+.snap {
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth
+}
+.snap::-webkit-scrollbar {
+  display: none;
+}
+
+.snap > div {
+  scroll-snap-align: center;
 }
 
 // Fonts

@@ -178,8 +178,6 @@ if(section) {
   }
 }
 
-
-
 function details() {
   return {
     init: function() {
@@ -192,23 +190,26 @@ function details() {
         clearInterval(timer);
       }
     },
+    toggleCarousel: function(index) {
+      this.activeSlide = index;
+      scrollAmount = (this.carouselContainer.scrollWidth / thumbs.length) * index;
+      this.carouselContainer.scrollLeft = scrollAmount;
+    },
     carouselNav: function(dir, event) {
       if(event == true) {
         this.playing = false;
       }
       if(dir == 1) {
-        if(this.activeSlide === this.thumbs.length-1) {
-          this.activeSlide = 0;
-        } else {
-          this.activeSlide = this.activeSlide + 1;
-        }
+        this.carouselContainer.scrollLeft = this.carouselContainer.scrollLeft + (this.carouselContainer.scrollWidth / thumbs.length);
+        this.activeSlide = this.activeSlide+1;
       }
       if(dir == 0) {
-        if(this.activeSlide === 0) {
-          this.activeSlide = this.thumbs.length-1;
-        } else {
-          this.activeSlide = this.activeSlide - 1;
-        }
+        this.carouselContainer.scrollLeft = this.carouselContainer.scrollLeft - (this.carouselContainer.scrollWidth / thumbs.length);
+        this.activeSlide = this.activeSlide-1;
+      }
+      console.log(this.activeSlide)
+      if(this.activeSlide === this.thumbs.length) {
+        console.log("last slide");
       }
     },
     toggleDescription: function() {
@@ -225,6 +226,7 @@ function details() {
     title:title,
     intro:intro,
     thumbs: thumbs,
-    descriptions: descriptions
+    descriptions: descriptions,
+    carouselContainer: document.querySelector(".carousel")
   }
 }
