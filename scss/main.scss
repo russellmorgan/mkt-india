@@ -290,6 +290,13 @@ header nav {
   }
 }
 
+.embla {
+  overflow:hidden;
+  &__container {
+    display:flex;
+  }
+}
+
 .carousel {
   height:680px;
   overflow:hidden;
@@ -375,11 +382,10 @@ header nav {
     }
   }
   .slide {
-    position:absolute;
-    top:0px;
-    left:0;
+    position:relative;
     z-index:1;
     max-height:680px;
+    min-width:100%;
     &.active {
       &:after {
         content:'';

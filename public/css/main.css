@@ -354,6 +354,16 @@ header nav a img {
   opacity: 0.8;
 }
 
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .carousel {
   height: 680px;
   overflow: hidden;
@@ -466,11 +476,10 @@ header nav a img {
 }
 
 .carousel .slide {
-  position: absolute;
-  top: 0px;
-  left: 0;
+  position: relative;
   z-index: 1;
   max-height: 680px;
+  min-width: 100%;
 }
 
 .carousel .slide.active:after {

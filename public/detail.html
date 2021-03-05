@@ -8,9 +8,13 @@
     crossorigin="anonymous" />
   <link href="css/tailwind-ms.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"
+  integrity="sha512-tnNM6PPNOVfZ5sGPw6hThCrcUBeqt2mVEk3EAj8tCtuMHqbuVm5/HsZagrr8W2aaFE+6rKIByGwQbEnmodrYVg=="
+  crossorigin="anonymous"></script>
   <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
   <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine-ie11.min.js" defer></script>
   <script src="https://kit.fontawesome.com/4b382b0d13.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
   <script src="main.js"></script>
   <title>India Campus</title>
 </head>
@@ -31,7 +35,7 @@
       </nav>
     </div>
   </header>
-  <div class="content px-5 lg:px-10" x-data="details()" x-init="$watch('playing', function(value){init(value)})" x-on:keydown.escape.window="showCarousel = false">
+  <div class="content px-5 lg:px-10" x-data="details('wellness')" x-on:keydown.escape.window="showCarousel = false">
     <section class="details-layout py-10">
       <div class="w-full lg:w-7/12" data-aos="fade">
         <h3 x-text="title"></h3>
@@ -51,15 +55,16 @@
           </div>
         </template>
       </div>
-      <div class="carousel" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
-        <template x-for="(thumb, index) in thumbs">
-          <div x-show.immediate.transition.opacity.duration.1500ms="activeSlide === index" class="w-full slide" :class="{'active':showDescription==true}">
-            <img x-bind:src="thumb">
+      <!-- detail carousel -->
+      <div class="carousel embla" x-ref="carousel" x-show.transition.opacity.duration.800ms="showCarousel">
+        <div class="embla__container">
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[0]">
             <div class="carousel__controls">
               <div>
-                <span x-text="index+1"></span>/<span x-text="thumbs.length"></span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false" x-on:click="playing=true"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true" x-on:click="playing=false"></i>
+                <span>1</span>/<span>10</span>
+                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
+                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
               </div>
               <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
             </div>
@@ -70,12 +75,36 @@
                   <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
                   </svg>
               </div>
-              <span x-show.transition.opacity="showDescription==true" x-text="descriptions[index]"></span>
+              <span x-show.transition.opacity="showDescription==true">descripotion here</span>
             </div>
           </div>
-        </template> 
-        <i class="arrow fas fa-chevron-right" x-on:keydown.arrow-right.window="carouselNav(1,true)" x-on:click="carouselNav(1,true)"></i>
-        <i class="arrow fas fa-chevron-left" x-on:keydown.arrow-left.window="carouselNav(0,true)" x-on:click="carouselNav(0,true)"></i>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[1]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[2]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[3]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[4]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[5]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[6]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[7]">
+          </div>
+          <div class="w-full slide embla__slide">
+            <img x-bind:src="thumbs[8]">
+          </div>
+        </div>
+        <i class="arrow fas fa-chevron-right" x-on:click="embla.scrollNext(false)"></i>
+        <i class="arrow fas fa-chevron-left" x-on:click="embla.scrollPrev(false)"></i>
       </div>
     </section>
     <footer class="my-20">
@@ -97,12 +126,12 @@
     </footer>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"
-    integrity="sha512-tnNM6PPNOVfZ5sGPw6hThCrcUBeqt2mVEk3EAj8tCtuMHqbuVm5/HsZagrr8W2aaFE+6rKIByGwQbEnmodrYVg=="
-    crossorigin="anonymous"></script>
-  <script>
+    <script type="text/javascript">
     AOS.init({ duration: 800 });
-  </script>
+      var emblaNode = document.querySelector('.embla')
+      var options = { loop: true }    
+      var embla = EmblaCarousel(emblaNode, options)
+    </script>
 </body>
 
 </html>

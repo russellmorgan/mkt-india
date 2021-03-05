@@ -1,19 +1,8 @@
 // Make sure Alpine loads properly with IE11
 window.deferLoadingAlpine = function(callback) { document.addEventListener('DOMContentLoaded', callback); }
 
-// Get deatils section show appropriate data
-var section = location.hash;
-section = section.slice(1);
 
-window.addEventListener('hashchange', function() {
-  document.location.reload(true)
-}, false);
-
-// This is where we will set up the various strings based on the hash
-var title, intro, thumbs, descriptions;
-var timer;
-
-if(section) {
+function details(section) {
   switch(section) {
     case "wellness":
       title = "Wellness & Recreation";
@@ -176,41 +165,7 @@ if(section) {
       thumbs = [],
       descriptions = [];
   }
-}
-
-
-
-function details() {
   return {
-    init: function() {
-      var l = this;
-      if(this.playing) {
-        timer = setInterval(function() {
-          l.carouselNav(1);
-        },4000)
-      } else {
-        clearInterval(timer);
-      }
-    },
-    carouselNav: function(dir, event) {
-      if(event == true) {
-        this.playing = false;
-      }
-      if(dir == 1) {
-        if(this.activeSlide === this.thumbs.length-1) {
-          this.activeSlide = 0;
-        } else {
-          this.activeSlide = this.activeSlide + 1;
-        }
-      }
-      if(dir == 0) {
-        if(this.activeSlide === 0) {
-          this.activeSlide = this.thumbs.length-1;
-        } else {
-          this.activeSlide = this.activeSlide - 1;
-        }
-      }
-    },
     toggleDescription: function() {
       if(this.showDescription) {
         this.showDescription = false;
