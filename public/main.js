@@ -198,11 +198,17 @@ function details(section) {
   }
 }
 
+
 // Update slide info
 window.addEventListener('DOMContentLoaded', (event) => {
-  embla.on('select', function() {
+  var activeSlide = 0;
+  embla.on('settle', function() {
     activeSlide = embla.slidesInView();
     document.getElementById("slide-num").innerHTML = (activeSlide[0]+1);
-    document.getElementById("slide-desc").innerHTML = descriptions[activeSlide];
+    document.getElementById("slide-desc").innerHTML = descriptions[activeSlide[0]];
+    document.getElementById("slide-desc").style.opacity = 1;
   });
+  embla.on('scroll', function() {
+    document.getElementById("slide-desc").style.opacity = 0;
+  })
 })
