@@ -65,187 +65,51 @@
         <div class="embla__container">
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[0]">
-            <div class="carousel__controls">
-              <div>
-                <span>1</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false" x-on:click="playing=true"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true" x-on:click="playing=false"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[0]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[1]">
-            <div class="carousel__controls">
-              <div>
-                <span>2</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[1]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[2]">
-            <div class="carousel__controls">
-              <div>
-                <span>3</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[2]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[3]">
-            <div class="carousel__controls">
-              <div>
-                <span>4</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[3]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[4]">
-            <div class="carousel__controls">
-              <div>
-                <span>5</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[4]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[5]">
-            <div class="carousel__controls">
-              <div>
-                <span>6</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[5]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[6]">
-            <div class="carousel__controls">
-              <div>
-                <span>7</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[6]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[7]">
-            <div class="carousel__controls">
-              <div>
-                <span>8</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[7]"></span>
-            </div>
           </div>
           <div class="w-full slide embla__slide">
             <img x-bind:src="thumbs[8]">
-            <div class="carousel__controls">
-              <div>
-                <span>9</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
-              </div>
-              <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
-            </div>
-            <div class="carousel__info">
-              <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
-                  <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
-                  </svg>
-              </div>
-              <span x-show.transition.opacity="showDescription==true" x-html="descriptions[8]"></span>
-            </div>
           </div>
         </div>
         <i class="arrow fas fa-chevron-right" x-on:click="embla.scrollNext(false)"></i>
         <i class="arrow fas fa-chevron-left" x-on:click="embla.scrollPrev(false)"></i>
+        <div class="carousel__controls">
+          <div>
+            <span id="slide-num">1</span>/<span>9</span>
+            <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false" x-on:click="playing=true"></i>
+            <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true" x-on:click="playing=false"></i>
+          </div>
+          <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
+        </div>
+        <div class="carousel__info">
+          <div :class="{'active':showDescription === true}" x-on:click="toggleDescription()">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 1C7.26857 1 1 7.26857 1 15C1 22.7325 7.26857 29 15 29C22.7309 29 29 22.7325 29 15C29 7.26857 22.7309 1 15 1" id="circle" stroke="white" stroke-width="2"/>
+              <path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M12.2593 21.3325L13.8102 13.8425L12 13.3499L12.0219 12.9268L15.6644 11.7052L15.8369 11.8931L13.9827 20.7926C13.8102 21.6144 14.1553 21.7084 15.9446 21.7317L15.9874 22.0142C15.1249 22.5769 14.0266 23 13.2718 23C12.3669 23 12.0868 22.1782 12.2593 21.3325ZM14.5651 7.97217C14.5651 7.00916 15.2117 6 16.0523 6C16.5912 6 17 6.35195 17 7.10312C17 8.06613 16.3748 9.0992 15.5348 9.0992C14.9953 9.0992 14.5651 8.72334 14.5651 7.97217Z" fill="white"/>
+              </svg>
+          </div>
+          <span id="slide-desc" x-show.transition.opacity="showDescription==true"></span>
+        </div>
       </div>
     </section>
     <footer class="my-20">

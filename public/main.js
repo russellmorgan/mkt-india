@@ -2,18 +2,18 @@
 window.deferLoadingAlpine = function(callback) { document.addEventListener('DOMContentLoaded', callback); }
 
 
-// Embla slideshow
+// Embla slideshow autplay function
 function autoplay(value) {
   if(value) {
     timer = setInterval(function() {
       embla.scrollNext()
-    },2000)
+    },4000)
   } else {
     clearInterval(timer);
   }
 }
 
-
+// Alpine data and functionality
 function details(section) {
   switch(section) {
     case "wellness":
@@ -197,3 +197,12 @@ function details(section) {
     descriptions: descriptions
   }
 }
+
+// Update slide info
+window.addEventListener('DOMContentLoaded', (event) => {
+  embla.on('select', function() {
+    activeSlide = embla.slidesInView();
+    document.getElementById("slide-num").innerHTML = (activeSlide[0]+1);
+    document.getElementById("slide-desc").innerHTML = descriptions[activeSlide];
+  });
+})
