@@ -35,7 +35,9 @@
       </nav>
     </div>
   </header>
-  <div class="content px-5 lg:px-10" x-data="details('wellness')" x-on:keydown.escape.window="showCarousel = false">
+  <div class="content px-5 lg:px-10" x-data="details('wellness')" 
+  x-init="$watch('playing', function(value) {autoplay(value)})"
+  x-on:keydown.escape.window="showCarousel = false">
     <section class="details-layout py-10">
       <div class="w-full lg:w-7/12" data-aos="fade">
         <h3 x-text="title"></h3>
@@ -64,8 +66,8 @@
             <div class="carousel__controls">
               <div>
                 <span>1</span>/<span>9</span>
-                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false"></i>
-                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true"></i>
+                <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false" x-on:click="playing=true"></i>
+                <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true" x-on:click="playing=false"></i>
               </div>
               <i class="fas fa-th cursor-pointer" x-on:click="playing = false; showCarousel = false"></i>
             </div>

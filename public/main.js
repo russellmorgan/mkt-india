@@ -2,6 +2,18 @@
 window.deferLoadingAlpine = function(callback) { document.addEventListener('DOMContentLoaded', callback); }
 
 
+// Embla slideshow
+function autoplay(value) {
+  if(value) {
+    timer = setInterval(function() {
+      embla.scrollNext()
+    },2000)
+  } else {
+    clearInterval(timer);
+  }
+}
+
+
 function details(section) {
   switch(section) {
     case "wellness":
