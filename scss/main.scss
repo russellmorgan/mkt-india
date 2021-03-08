@@ -40,6 +40,17 @@ border-bottom:1px solid #979797;
 z-index:100;
 position:relative;
 min-height:78px;
+max-width:1440px;
+margin: auto;
+//IE 11 needs absolute or it shifts the hamburger around
+@include target-metro() {
+  .fa-bars {
+    position:absolute;
+    top:0;
+    right:5%;
+  }
+}
+
   img {
     max-height:23px;
     @include mq($from: desktop) {

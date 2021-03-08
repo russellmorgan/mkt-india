@@ -32,6 +32,16 @@ header {
   z-index: 100;
   position: relative;
   min-height: 78px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header .fa-bars {
+    position: absolute;
+    top: 0;
+    right: 5%;
+  }
 }
 
 header img {

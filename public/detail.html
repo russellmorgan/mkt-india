@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <header class="py-6 lg:py-10 border-0" x-data="{open:false}">
+  <header class="py-6 lg:py-10 border-0 relative" x-data="{open:false}">
     <div class="content flex justify-between items-center px-5 lg:px-10 relative z-10">
       <a href="index.html"><img src="img/logo-black.png" alt="Morgan Stanley"></a>
       <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
@@ -47,10 +47,6 @@
       </div>
     </section>
     <section>
-      <div class="hidden flex w-100 cursor-pointer btn-slideshow mb-10" x-show="showCarousel==false" x-on:click="showCarousel = true">
-        <img src="img/btn-slideshow.svg" alt="view slideshow" class="mr-2">
-        View as slideshow 
-      </div>
       <div x-show="showCarousel == false" class="flex flex-wrap thumbnails" data-aos="fade-up">
         <template x-for="(thumb, index) in thumbs">
           <div class="thumb">
