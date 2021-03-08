@@ -335,6 +335,12 @@ header nav a img {
   transition: all 0.2s linear;
 }
 
+@media (max-width: 46.24em) {
+  .thumbnails .thumb {
+    pointer-events: none;
+  }
+}
+
 .thumbnails .thumb:after {
   content: '';
   position: absolute;

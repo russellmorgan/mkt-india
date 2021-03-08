@@ -265,6 +265,9 @@ header nav {
     }
   }
   .thumb {
+    @include mq($until: tablet) {
+      pointer-events: none;
+    }
     position:relative;
     z-index:10;
     transition:all 0.2s linear;
