@@ -200,7 +200,7 @@ function details(section) {
 
 
 // Update slide info
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', function(event) {
   var activeSlide = 0;
   embla.on('settle', function() {
     activeSlide = embla.slidesInView();
