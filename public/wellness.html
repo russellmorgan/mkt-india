@@ -26,12 +26,12 @@
       <i class="text-3xl fas fa-bars cursor-pointer" x-on:click="open=true"></i>
       <nav class="absolute top-0 right-0 shadow" x-show.transition="open">
         <i x-on:click="open=false" id="menu-close" class="fas fa-times absolute text-3xl top-0 right-0 cursor-pointer p-3"></i>
-        <a href="detail.html#reception"><img src="img/menu_reception@2x.png">Reception</a>
-        <a href="detail.html#office"><img src="img/menu_building@2x.png">Office Buildings</a>
-        <a href="detail.html#wellness"><img src="img/menu_wellness@2x.png">Wellness & Recreation</a>
-        <a href="detail.html#workplace"><img src="img/menu_workplace@2x.png">Conference Rooms & Workplace</a>
-        <a href="detail.html#agile"><img src="img/menu_agile@2x.png">Agile Spaces</a>
-        <a href="detail.html#pantry"><img src="img/menu_pantry@2x.png">Pantry & Cafeteria</a>
+        <a href="reception.html"><img src="img/menu_reception@2x.png">Reception</a>
+        <a href="office.html"><img src="img/menu_building@2x.png">Office Buildings</a>
+        <a href="wellness.html"><img src="img/menu_wellness@2x.png">Wellness & Recreation</a>
+        <a href="workplace.html"><img src="img/menu_workplace@2x.png">Conference Rooms & Workplace</a>
+        <a href="agile.html"><img src="img/menu_agile@2x.png">Agile Spaces</a>
+        <a href="pantry.html"><img src="img/menu_pantry@2x.png">Pantry & Cafeteria</a>
       </nav>
     </div>
   </header>
@@ -91,7 +91,7 @@
         <i class="arrow fas fa-chevron-left" x-on:click="embla.scrollPrev(false)"></i>
         <div class="carousel__controls">
           <div>
-            <span id="slide-num">1</span>/<span>9</span>
+            <span id="slide-num">1</span>/<span x-text="thumbs.length"></span>
             <i class="pl-5 fas fa-play cursor-pointer" x-show="playing==false" x-on:click="playing=true"></i>
             <i class="pl-5 fas fa-pause cursor-pointer" x-show="playing==true" x-on:click="playing=false"></i>
           </div>
